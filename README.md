@@ -1,2 +1,3 @@
-# Misty-Forest
+# Alpine Mist
+
 A zen browser customization pack
