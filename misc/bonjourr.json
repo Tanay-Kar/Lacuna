@@ -1,0 +1,155 @@
+{
+  "about": {
+    "browser": "firefox",
+    "version": "20.4.2"
+  },
+  "showall": true,
+  "lang": "en",
+  "dark": "system",
+  "favicon": "💠",
+  "tabtitle": "Home",
+  "greeting": "<name>",
+  "pagegap": 6,
+  "pagewidth": 1300,
+  "time": true,
+  "main": true,
+  "dateformat": "auto",
+  "background_blur": 0,
+  "background_bright": 0.42,
+  "background_type": "unsplash",
+  "quicklinks": false,
+  "syncbookmarks": null,
+  "textShadow": 0,
+  "announcements": "major",
+  "review": -1,
+  "css": "",
+  "hide": {
+    "settingsicon": true,
+    "weatherdesc": false,
+    "weathericon": false,
+    "greetings": false
+  },
+  "linkstyle": "medium",
+  "linktitles": true,
+  "linkbackgrounds": false,
+  "linknewtab": false,
+  "linksrow": 6,
+  "linksfppmke": {
+    "_id": "linksfppmke",
+    "parent": "default",
+    "order": 0,
+    "title": "Google",
+    "url": "https://www.google.com"
+  },
+  "linkgroups": {
+    "on": false,
+    "selected": "default",
+    "groups": [
+      "default"
+    ],
+    "pinned": [],
+    "synced": []
+  },
+  "clock": {
+    "ampm": true,
+    "size": 1.375,
+    "analog": false,
+    "seconds": false,
+    "timezone": "auto",
+    "ampmlabel": false,
+    "worldclocks": false
+  },
+  "analogstyle": {
+    "face": "none",
+    "hands": "modern",
+    "shape": "round",
+    "border": "#fff0",
+    "background": "#fff0"
+  },
+  "worldclocks": [
+    {
+      "timezone": "+0",
+      "region": "Paris"
+    }
+  ],
+  "unsplash": {
+    "every": "hour",
+    "collection": "6iHCDyFf_Ig,jSaULAjnN5g",
+    "lastCollec": "user",
+    "time": 1738159012332
+  },
+  "weather": {
+    "ccode": "IN",
+    "city": "Netājinagar",
+    "unit": "metric",
+    "provider": "",
+    "moreinfo": "accu",
+    "forecast": "auto",
+    "temperature": "actual",
+    "geolocation": "off"
+  },
+  "notes": {
+    "on": false,
+    "background": "#fff0",
+    "opacity": 0.1,
+    "width": 70,
+    "align": "left",
+    "text": ""
+  },
+  "searchbar": {
+    "on": false,
+    "opacity": 0.1,
+    "newtab": false,
+    "suggestions": true,
+    "engine": "default",
+    "request": "",
+    "placeholder": ""
+  },
+  "quotes": {
+    "on": true,
+    "author": true,
+    "type": "classic",
+    "frequency": "day",
+    "last": 1738115056731
+  },
+  "font": {
+    "size": "10.9",
+    "family": "Inter",
+    "system": true,
+    "weight": "100",
+    "weightlist": []
+  },
+  "supporters": {
+    "enabled": true,
+    "closed": true,
+    "month": 1
+  },
+  "move": {
+    "selection": "single",
+    "layouts": {
+      "single": {
+        "items": {
+          "main": {
+            "text": "",
+            "box": "end center"
+          },
+          "quotes": {
+            "text": "",
+            "box": "end center"
+          }
+        },
+        "grid": [
+          [
+            "time"
+          ],
+          [
+            "main"
+          ],
+          [
+            "quotes"
+          ]
+        ]
+      }
+    }
+  }
+}
