@@ -2,7 +2,6 @@
   Lacuna
 </h1>
 
-
 <p align="center">
   <a href="https://zen-browser.app"><img height="40" src="https://github.com/heyitszenithyt/zen-browser-badges/blob/fb14dcd72694b7176d141c774629df76af87514e/light/zen-badge-light.png"></a>
   <br>
@@ -15,22 +14,26 @@ _Lacuna_ [`/ləˈkjuːnə/`] is a latin word which symbolises an empty space or 
 ## Features
 
 ### Clean look
-![Screenshot From 2025-01-30 10-51-15](https://github.com/user-attachments/assets/7f931baf-8181-4a33-93bc-9c8fbedb0029)
+![clean](https://github.com/user-attachments/assets/7f931baf-8181-4a33-93bc-9c8fbedb0029)
 
 ### Cohesive design
-![Screenshot From 2025-01-30 11-02-02](https://github.com/user-attachments/assets/d802d3fd-0705-459f-a463-0a57d00f613c)
-credit: [Cohesion](https://github.com/TheBigWazz/ZenThemes/tree/main/Cohesion)
+![cohesion](https://github.com/user-attachments/assets/d802d3fd-0705-459f-a463-0a57d00f613c)
+<br>credit: [Cohesion](https://github.com/TheBigWazz/ZenThemes/tree/main/Cohesion)
 
 ### Minimal search bar
-![Screenshot From 2025-01-30 10-59-14](https://github.com/user-attachments/assets/908f5b9f-1a62-421a-a667-ba7e29fd75a3)
+![search](https://github.com/user-attachments/assets/908f5b9f-1a62-421a-a667-ba7e29fd75a3)
 
 ### Blurred UI
-![Screenshot From 2025-01-30 10-51-31](https://github.com/user-attachments/assets/c1273834-c075-415c-b498-aad5baefe7f7)
+![blur](https://github.com/user-attachments/assets/c1273834-c075-415c-b498-aad5baefe7f7)
 
 ### Better PDF reader UI
-![Screenshot From 2025-01-30 11-06-09](https://github.com/user-attachments/assets/bdb20a89-b21f-4a2e-b42f-28bd5dec1c1c)
-credit: [Natsumi](https://github.com/greeeen-dev/natsumi-browser)
+![pdfreader](https://github.com/user-attachments/assets/bdb20a89-b21f-4a2e-b42f-28bd5dec1c1c)
+<br>credit: [Natsumi](https://github.com/greeeen-dev/natsumi-browser)
 
+
+### Tab Groups
+![tabgroups](https://github.com/user-attachments/assets/aa7cf02c-c406-48dd-967a-08fa78194d6f)
+<br>credit: [vicky5124](https://github.com/vicky5124)
 
 ## Installation
 #### 1. Installing css
@@ -91,6 +94,12 @@ credit: [Natsumi](https://github.com/greeeen-dev/natsumi-browser)
 | `zen.view.grey-out-inactive-windows`      | false |
 | `zen.workspaces.natural-scroll`           | true  |
 | `zen.workspaces.show-workspace-indicator` | false |
+
+#### 5. Setting up tab groups
+> [!WARNING]
+> The developer of Zen Browser recommends **against** using custom CSS to implement Tab Groups for the time being. Proceed at your own risk.
+
+- Go to about:config and set `browser.tabs.groups.enabled` to true
 
 ## Credits
 Thank you to:
