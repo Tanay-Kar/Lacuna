@@ -104,6 +104,6 @@ _Lacuna_ [`/ləˈkjuːnə/`] is a latin word which symbolises an empty space or 
 ## Credits
 Thank you to:
 - [greeeen-dev](https://github.com/greeeen-dev) for the amazing work in [Natsumi Browser](https://github.com/greeeen-dev/natsumi-browser)
-- [TheBigWazz(https://github.com/TheBigWazz) for the incredible work in [Cohesion](https://github.com/TheBigWazz/ZenThemes/tree/main/Cohesion)
+- [TheBigWazz](https://github.com/TheBigWazz) for the incredible work in [Cohesion](https://github.com/TheBigWazz/ZenThemes/tree/main/Cohesion)
 - [vicky5124](https://github.com/vicky5124) for the Tab Groups CSS
 - [mr-cheff](https://github.com/mr-cheff) and Zen's [contributors](https://github.com/zen-browser/desktop/graphs/contributors) for creating Zen Browser
