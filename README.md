@@ -2,6 +2,7 @@
   Lacuna
 </h1>
 
+
 <p align="center">
   <a href="https://zen-browser.app"><img height="40" src="https://github.com/heyitszenithyt/zen-browser-badges/blob/fb14dcd72694b7176d141c774629df76af87514e/light/zen-badge-light.png"></a>
   <br>
@@ -9,20 +10,27 @@
 </p>
 
 ## What is Lacuna ?
-Lacuna (`/ləˈkjuːnə/`) is a latin word which symbolises an empty space or void. This customization pack embodies blank space and minimalism to create a peacefull and tranquil browsing experiance.
+_Lacuna_ [`/ləˈkjuːnə/`] is a latin word which symbolises an empty space or void. This customization pack embodies blank space and minimalism to create a peacefull and tranquil browsing experiance.
 
 ## Features
+
 ### Clean look
+![Screenshot From 2025-01-30 10-51-15](https://github.com/user-attachments/assets/7f931baf-8181-4a33-93bc-9c8fbedb0029)
 
 ### Cohesive design
-credit: Wazz
+![Screenshot From 2025-01-30 11-02-02](https://github.com/user-attachments/assets/d802d3fd-0705-459f-a463-0a57d00f613c)
+credit: [Cohesion](https://github.com/TheBigWazz/ZenThemes/tree/main/Cohesion)
 
 ### Minimal search bar
+![Screenshot From 2025-01-30 10-59-14](https://github.com/user-attachments/assets/908f5b9f-1a62-421a-a667-ba7e29fd75a3)
 
 ### Blurred UI
+![Screenshot From 2025-01-30 10-51-31](https://github.com/user-attachments/assets/c1273834-c075-415c-b498-aad5baefe7f7)
 
-### Better PDF reader ui
-credit: Natsumi
+### Better PDF reader UI
+![Screenshot From 2025-01-30 11-06-09](https://github.com/user-attachments/assets/bdb20a89-b21f-4a2e-b42f-28bd5dec1c1c)
+credit: [Natsumi](https://github.com/greeeen-dev/natsumi-browser)
+
 
 ## Installation
 #### 1. Installing css
@@ -84,4 +92,9 @@ credit: Natsumi
 | `zen.workspaces.natural-scroll`           | true  |
 | `zen.workspaces.show-workspace-indicator` | false |
 
-
+## Credits
+Thank you to:
+- [greeeen-dev](https://github.com/greeeen-dev) for the amazing work in [Natsumi Browser](https://github.com/greeeen-dev/natsumi-browser)
+- [TheBigWazz(https://github.com/TheBigWazz) for the incredible work in [Cohesion](https://github.com/TheBigWazz/ZenThemes/tree/main/Cohesion)
+- [vicky5124](https://github.com/vicky5124) for the Tab Groups CSS
+- [mr-cheff](https://github.com/mr-cheff) and Zen's [contributors](https://github.com/zen-browser/desktop/graphs/contributors) for creating Zen Browser
