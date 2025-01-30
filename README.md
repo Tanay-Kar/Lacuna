@@ -5,11 +5,11 @@
 <p align="center">
   <a href="https://zen-browser.app"><img height="40" src="https://github.com/heyitszenithyt/zen-browser-badges/blob/fb14dcd72694b7176d141c774629df76af87514e/light/zen-badge-light.png"></a>
   <br>
-  A minimal customization pack for zen browser
+  A Minimal Customization Pack for Zen Browser
 </p>
 
 ## What is Lacuna ?
-_Lacuna_ [`/ləˈkjuːnə/`] is a latin word which symbolises an empty space or void. This customization pack embodies blank space and minimalism to create a peacefull and tranquil browsing experiance.
+**_Lacuna_** (_/ləˈkjuːnə/_) is a Latin word meaning "empty space" or "void." This customization pack embodies minimalism and clean design, creating a peaceful and tranquil browsing experience.
 
 ## Features
 
@@ -37,12 +37,12 @@ _Lacuna_ [`/ləˈkjuːnə/`] is a latin word which symbolises an empty space or 
 
 ## Installation
 #### 1. Installing css
-- If you have not already, follow the [Zen Live Editing](https://docs.zen-browser.app/guides/live-editing) guide to first make your own **chrome** folder.
-- Download this repository and copy the contents of the `css/` folder to your `chrome` folder.
+- If you have not already, follow the [Zen Live Editing](https://docs.zen-browser.app/guides/live-editing) guide to first create your **chrome** folder.
+- Download this repository and copy the contents of the `css/` folder into your `chrome` folder.
 
 > [!Note]
 > This will **replace** your previous `userChrome.css`.
-> Copy your previous userChrome css and paste it below Lacuna's userChrome css
+> Back up your previous userChrome.css and paste its contents below Lacuna's userChrome.css.
 
 - Restart the browser
 
@@ -67,23 +67,23 @@ _Lacuna_ [`/ləˈkjuːnə/`] is a latin word which symbolises an empty space or 
 </p>
 </b>
 
-#### 3. Miscellaneous
+#### 3. Miscellaneous setup
 ##### **Setting up Bonjourr new tab**
-  - Install [Bonjourr](https://addons.mozilla.org/en-US/firefox/addon/bonjourr-startpage/) from the firefox addons store
+  - Install [Bonjourr](https://addons.mozilla.org/en-US/firefox/addon/bonjourr-startpage/) from the Firefox Add-ons Store
   - Import the config file [bonjourr.json](./misc/bonjourr.json)
 
 ##### **Setting up Short URL**
 
   > [!Warning]
   > Installing a userChrome js loader makes your browser vulnerable to **external malicious code** running without elevated permissions. <br>
-  > Unless you know what you are doing , **Do not proceed**.
+  > Unless you are confident in your technical knowledge, **do not proceed**.
     
   - Follow the detailed steps provided in the [fx-autoconfig](https://github.com/MrOtherGuy/fx-autoconfig) repository to configure custom scripts in your browser.
   - Copy the files in `./js/` folder to your `chrome/JS/` folder.
   - Clear your zen's startup cache and restart the browser.
 
 #### 4. Recommended configs
-| config                                    | value |
+| Config                                    | Value |
 |-------------------------------------------|-------|
 | `zen.theme.color-prefs.amoled`            | true  |
 | `zen.theme.essentials-favicon-bg`         | true  |
