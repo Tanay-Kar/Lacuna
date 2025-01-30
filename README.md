@@ -72,8 +72,8 @@ credit: Natsumi
   - Clear your zen's startup cache and restart the browser.
 
 #### 4. Recommended configs
-| config                                  | value |
-|-----------------------------------------|-------|
+| config                                    | value |
+|-------------------------------------------|-------|
 | `zen.theme.color-prefs.amoled`            | true  |
 | `zen.theme.essentials-favicon-bg`         | true  |
 | `zen.theme.pill-button`                   | true  |
@@ -83,4 +83,5 @@ credit: Natsumi
 | `zen.view.grey-out-inactive-windows`      | false |
 | `zen.workspaces.natural-scroll`           | true  |
 | `zen.workspaces.show-workspace-indicator` | false |
+
 
