@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://zen-browser.app"><img height="40" src="https://github.com/heyitszenithyt/zen-browser-badges/blob/fb14dcd72694b7176d141c774629df76af87514e/light/zen-badge-light.png"></a>
   <br>
-  A minimal customiztion pack for zen browser
+  A minimal customization pack for zen browser
 </p>
 
 ## What is Lacuna ?
