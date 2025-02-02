@@ -446,9 +446,9 @@ tab-group:has(tab[hidden]) {
     margin: 0px 3px !important;
   }
 
-  @media (prefers-color-scheme: dark) {
+  @media (prefers-color-scheme: light) {
     &:is([soundplaying], [muted], [activemedia-blocked]) {
-      filter: invert(0);
+      filter: invert(1);
     }
   }
 
