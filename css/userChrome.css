@@ -312,7 +312,7 @@ tab-group:has(tab[hidden]) {
 /* Colouring Essentials */
 #zen-essentials-container {
   .tabbrowser-tab[pinned] .tab-background {
-    background-color: color-mix(in srgb, #000000 20%, transparent) !important;
+    background-color: light-dark(rgba(255,255,255,0.3), color-mix(in srgb, #000000 20%, transparent)) !important;
   }
 }
 
@@ -320,24 +320,31 @@ tab-group:has(tab[hidden]) {
 #zen-essentials-container {
   @media (-moz-bool-pref: "zen.theme.essentials-favicon-bg") {
     .tab-background {
-      &::before {
-        width: calc(100%) !important;
-        height: calc(100%) !important;
-        mask-image: none !important;
-        margin: 0px !important;
-        background-color: color-mix(
-          in srgb,
-          #000000 50%,
-          transparent
-        ) !important;
+      @media (prefers-color-scheme: light) {
+        &::before {
+          width: calc(100%) !important;
+          height: calc(100%) !important;
+          mask-image: none !important;
+          border-radius: 0px !important;
+          margin: 0px !important;
+          background-color: color-mix(in srgb, #ffffff 75%, transparent) !important;
+        }
+      }
+      @media (prefers-color-scheme: dark) {
+        &::before {
+          width: calc(100%) !important;
+          height: calc(100%) !important;
+          mask-image: none !important;
+          margin: 0px !important;
+          background-color: color-mix(in srgb, #000000 65%, transparent) !important;
+        }
       }
       &::after {
         left: -50% !important;
         top: -50% !important;
         width: 200% !important;
         height: 200% !important;
-        filter: saturate(300%) blur (50px) !important;
-        box-shadow: 0px 0px 16px 10px #888888 !important;
+        filter: blur (50px) !important;
       }
     }
   }
