@@ -386,11 +386,12 @@ tab-group:has(tab[hidden]) {
 /*Transition for tab background */
 .tabbrowser-tab .tab-background {
   transition: background-color 0.3s ease;
+  box-shadow: none !important;
 }
 
 /*When tabs are selected/active */
 .tabbrowser-tab .tab-background:is([selected], [multiselected]) {
-  background-color: color-mix(in srgb, #000000 35%, transparent) !important;
+  background-color: light-dark(color-mix(in srgb, #fefefe 45%, transparent), color-mix(in srgb, #000000 35%, transparent)) !important;
 }
 
 /*Styling for Tab close button*/
