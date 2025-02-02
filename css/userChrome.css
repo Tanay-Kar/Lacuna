@@ -518,7 +518,7 @@ tab-group:has(tab[hidden]) {
   padding-bottom: 6px;
   margin-right: 6px !important;
   margin-left: 1px !important;
-  background: rgba(0, 0, 0, 0.2) !important;
+  background: light-dark(rgba(255,255,255,0.11), rgba(0, 0, 0, 0.2)) !important;
 }
 
 /* Transparent Findbar */
@@ -529,7 +529,7 @@ findbar {
 
 /* Cleaned & Transparent Sidebar */
 #sidebar-box {
-  background-color: rgba(0, 0, 0, 0.2) !important;
+  background-color: light-dark(rgba(255,255,255,0.11), rgba(0, 0, 0, 0.2)) !important;
   border: none !important;
 
   & #sidebar-header {
@@ -566,6 +566,7 @@ findbar {
   padding: 5px !important;
   border-bottom: 0 solid var(--sidebar-border-color) !important;
 }
+
 
 /* === BLUR COMPACT SIDEBAR === */
 /* Based on code by https://github.com/Tanay-Kar */
