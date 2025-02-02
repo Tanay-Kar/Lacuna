@@ -260,7 +260,7 @@ tab-group:has(tab[hidden]) {
 
 #urlbar:not([open]) {
   #urlbar-background {
-    background-color: color-mix(in srgb, #000000 25%, transparent) !important;
+    background-color: light-dark(color-mix(in srgb, #ffffff 25%, transparent),color-mix(in srgb, #000000 25%, transparent)) !important;
   }
   #userContext-icons,
   #identity-icon-box,
@@ -273,11 +273,11 @@ tab-group:has(tab[hidden]) {
   #urlbar-background {
     margin: -5px !important;
     border: none !important;
-    background-color: color-mix(in srgb, #0e0e0e 95%, transparent) !important;
+    background-color: light-dark(color-mix(in srgb, #fdfdfd 75%, transparent), color-mix(in srgb, #0e0e0e 75%, transparent)) !important;
     backdrop-filter: blur(20px) !important;
   }
   #urlbar-container:has(&) {
-    background: color-mix(in srgb, #0e0e0e 40%, transparent) !important;
+    background: light-dark(color-mix(in srgb, #fdfdfd 20%, transparent), color-mix(in srgb, #0e0e0e 40%, transparent)) !important;
   }
 }
 
