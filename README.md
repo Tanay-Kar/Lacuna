@@ -31,10 +31,6 @@
 <br>credit: [Natsumi](https://github.com/greeeen-dev/natsumi-browser)
 
 
-### Tab Groups
-![tabgroups](https://github.com/user-attachments/assets/aa7cf02c-c406-48dd-967a-08fa78194d6f)
-<br>credit: [vicky5124](https://github.com/vicky5124)
-
 ## Installation
 #### 1. Installing css
 - If you have not already, follow the [Zen Live Editing](https://docs.zen-browser.app/guides/live-editing) guide to first create your **chrome** folder.
@@ -97,7 +93,7 @@
 
 #### 5. Setting up tab groups
 > [!WARNING]
-> The developer of Zen Browser recommends **against** using custom CSS to implement Tab Groups for the time being. Proceed at your own risk.
+> The developer of Zen Browser recommends **against** using custom CSS to implement Tab Groups for the time being. Visual glitches will NOT be addressed until tab groups are added to native Zen. Proceed at your own risk.
 
 - Go to about:config and set `browser.tabs.groups.enabled` to true
 
