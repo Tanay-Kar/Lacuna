@@ -578,7 +578,7 @@ findbar {
   }
 }
 
-#zen-sidebar-web-panel-wrapper {
+#zen-sidebar-web-panel {
   background: #00000040 !important;
   backdrop-filter: blur(40px) !important;
 }
