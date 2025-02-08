@@ -577,6 +577,7 @@ findbar {
 :root[zen-compact-mode="true"] {
   #navigator-toolbox #titlebar {
     width: 100%;
+    background: transparent !important;
     backdrop-filter: blur(30px) brightness(70%) !important;
   }
 }
