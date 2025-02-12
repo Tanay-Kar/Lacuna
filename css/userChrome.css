@@ -45,15 +45,6 @@ browser {
   opacity: 0.7;
 }
 
-.tab-background {
-  height: 40px !important;
-}
-
-.tab-content {
-  margin-left: 5px !important;
-  margin-right: 4px !important;
-}
-
 #new-tab-button > .toolbarbutton-text {
   font-weight: 700 !important;
   opacity: 0.5;
@@ -214,6 +205,23 @@ browser {
   margin-top: 1px !important;
   margin-left: 6px !important;
 }
+
+.tabbrowser-tab:not([zen-glance-tab="true"])  > .tab-stack > .tab-background {
+  height: 40px !important;
+}
+
+.tabbrowser-tab:not([zen-glance-tab="true"])  > .tab-stack > .tab-content {
+  margin-left: 5px !important;
+  margin-right: 4px !important;
+}
+
+/* reduce favicon sizes */
+.tabbrowser-tab:not([zen-glance-tab="true"])  > .tab-stack > .tab-content > .tab-icon-stack > .tab-icon-image:not([pinned]) {
+  width: 14px !important;
+  height: 14px !important;
+  margin-left: 3.5px !important;
+}
+
 
 /* reduce favicon sizes */
 .tab-icon-image:not([pinned]) {
