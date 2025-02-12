@@ -119,11 +119,25 @@ browser {
   #urlbar-background {
     margin: -5px !important;
     border: none !important;
-    background-color: light-dark(color-mix(in srgb, #fdfdfd 75%, transparent), color-mix(in srgb, #0e0e0e 75%, transparent)) !important;
-    backdrop-filter: blur(20px) !important;
+    background-color: light-dark(color-mix(in srgb, #fdfdfd 65%, transparent), color-mix(in srgb, #0e0e0e 75%, transparent)) !important;
+    backdrop-filter: blur(15px) !important;
   }
   #urlbar-container:has(&) {
     background: light-dark(color-mix(in srgb, #fdfdfd 20%, transparent), color-mix(in srgb, #0e0e0e 40%, transparent)) !important;
+  }
+}
+
+#urlbar[open][zen-floating-urlbar="true"]{
+  &:after {
+    content: "";
+    position: fixed;
+    pointer-events: none;
+    width: 200vw;
+    height: 100vh;
+    top: 0px;
+    left: -50px;
+    backdrop-filter: blur(2px) brightness(80%);  
+    z-index: -1;
   }
 }
 
