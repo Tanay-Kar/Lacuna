@@ -221,14 +221,6 @@ browser {
   margin-left: 3.5px !important;
 }
 
-
-/* reduce favicon sizes */
-.tab-icon-image:not([pinned]) {
-  width: 14px !important;
-  height: 14px !important;
-  margin-left: 3.5px !important;
-}
-
 /* Hides the splitter/resize bar, but still functional */
 #zen-sidebar-splitter {
   opacity: 0 !important;
