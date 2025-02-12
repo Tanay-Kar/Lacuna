@@ -91,11 +91,6 @@
 | `zen.workspaces.natural-scroll`           | true  |
 | `zen.workspaces.show-workspace-indicator` | false |
 
-#### 5. Setting up tab groups
-> [!WARNING]
-> The developer of Zen Browser recommends **against** using custom CSS to implement Tab Groups for the time being. Visual glitches will NOT be addressed until tab groups are added to native Zen. Proceed at your own risk.
-
-- Go to about:config and set `browser.tabs.groups.enabled` to true
 
 ## Credits
 Thank you to:
