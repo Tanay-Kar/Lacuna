@@ -346,6 +346,19 @@ browser {
   }
 }
 
+@media not (-moz-bool-pref: "zen.view.sidebar-expanded") {
+    .tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]):hover img {
+        opacity: 1 !important;
+        transition: opacity 0.1s ease-out !important;
+    }
+
+    .tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]):hover .tab-icon-overlay { 
+        margin: 0px !important;
+        transition: opacity 0.1s ease-out, transform 0.1s ease-out !important;
+        transform: translate(6.9px, -6.9px) scale(0.69) !important;
+    }
+}
+
 
 /* Better rounded workspace indicator */
 @media (-moz-bool-pref: "zen.theme.pill-button") {
