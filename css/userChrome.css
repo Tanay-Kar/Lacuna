@@ -74,13 +74,12 @@ browser {
   display: none !important;
 }
 
-/* Makes padding symetrical in single toolbar mode */
+/* Makes padding symmetrical in single toolbar mode */
 #zen-essentials-container {
   margin-bottom: 6px !important;
 }
 
 /* === URL BAR CUSTOMIZATION === */
-/* Based on code by https://github.com/itsmefen */
 
 /* For moving the URL bar */
 #nav-bar {
