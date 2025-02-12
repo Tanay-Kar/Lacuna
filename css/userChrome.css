@@ -182,21 +182,14 @@ browser {
     .tab-background {
       @media (prefers-color-scheme: light) {
         &::before {
-          width: calc(100%) !important;
-          height: calc(100%) !important;
           mask-image: none !important;
-          border-radius: 0px !important;
-          margin: 0px !important;
-          background-color: color-mix(in srgb, #ffffff 75%, transparent) !important;
+          background-color: color-mix(in srgb, #ffffff 65%, transparent) !important;
         }
       }
       @media (prefers-color-scheme: dark) {
         &::before {
-          width: calc(100%) !important;
-          height: calc(100%) !important;
           mask-image: none !important;
-          margin: 0px !important;
-          background-color: color-mix(in srgb, #000000 65%, transparent) !important;
+          background-color: color-mix(in srgb, #000000 55%, transparent) !important;
         }
       }
       &::after {
@@ -204,7 +197,7 @@ browser {
         top: -50% !important;
         width: 200% !important;
         height: 200% !important;
-        filter: blur (50px) !important;
+        filter: blur (20px) !important;
       }
     }
   }
