@@ -169,30 +169,24 @@ browser {
 /* === ESSENTIALS === */
 
 /* Colouring Essentials */
-#zen-essentials-container {
-  .tabbrowser-tab[pinned] .tab-background {
-    background-color: light-dark(rgba(255, 255, 255, 0.3), color-mix(in srgb, #000000 20%, transparent)) !important;
+
+#zen-essentials-container .tabbrowser-tab {
+  .tab-background {
+    background-color: light-dark(
+      color-mix(in srgb, #ffffff 65%, transparent),
+      color-mix(in srgb, #000000 25%, transparent)
+    ) !important;
   }
-}
 
-/* Based on code by https://github.com/greeeen-dev */
-#zen-essentials-container {
+  &:hover .tab-background {
+    background-color: light-dark(
+      color-mix(in srgb, #ffffff 55%, transparent),
+      color-mix(in srgb, #000000 35%, transparent)
+    ) !important;
+  }
+
   @media (-moz-bool-pref: "zen.theme.essentials-favicon-bg") {
-    .tab-background {
-      @media (prefers-color-scheme: light) {
-        &::before {
-          mask-image: none !important;
-          background-color: color-mix(in srgb, #ffffff 65%, transparent) !important;
-        }
-      }
-
-      @media (prefers-color-scheme: dark) {
-        &::before {
-          mask-image: none !important;
-          background-color: color-mix(in srgb, #000000 55%, transparent) !important;
-        }
-      }
-
+    &[visuallyselected] .tab-background {
       &::after {
         left: -50% !important;
         top: -50% !important;
@@ -200,6 +194,21 @@ browser {
         height: 200% !important;
         filter: blur (20px) !important;
       }
+
+      &::before {
+        mask-image: none !important;
+        background-color: light-dark(
+          color-mix(in srgb, #ffffff 65%, transparent),
+          color-mix(in srgb, #000000 55%, transparent)
+        ) !important;
+      }
+    }
+
+    &[visuallyselected]:hover .tab-background::before {
+      background-color: light-dark(
+        color-mix(in srgb, #ffffff 55%, transparent),
+        color-mix(in srgb, #000000 65%, transparent)
+      ) !important;
     }
   }
 }
