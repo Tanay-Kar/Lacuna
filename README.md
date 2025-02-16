@@ -91,11 +91,14 @@
 | `zen.workspaces.natural-scroll`           | true  |
 | `zen.workspaces.show-workspace-indicator` | false |
 
-#### 5. Setting up tab groups
-> [!WARNING]
-> The developer of Zen Browser recommends **against** using custom CSS to implement Tab Groups for the time being. Visual glitches will NOT be addressed until tab groups are added to native Zen. Proceed at your own risk.
+## Lacuna configs
+These are a few configs which will allow you to control certain features of lacuna
+- `lacuna.sidebar.compact-transparent`  : Enables transparent compact mode sidebar
+- `lacuna.tab.default-audio-indicator`  : Disables custom audio indicator in favour of the default one
 
-- Go to about:config and set `browser.tabs.groups.enabled` to true
+> [!Note]
+> You'd have to create these configs yourself in about:config. All configs are of type `boolean` unless mentioned otherwise
+ 
 
 ## Credits
 Thank you to:
