@@ -65,11 +65,6 @@ browser {
   font-weight: 700;
 }
 
-/* Removes tab-reset button in pinned tabs */
-.tab-reset-button {
-  display: none !important;
-}
-
 /* Makes padding symmetrical in single toolbar mode */
 #zen-essentials-container {
   margin-bottom: 6px !important;
@@ -123,6 +118,10 @@ browser {
   #urlbar-container:has(&) {
     background: light-dark(color-mix(in srgb, #fdfdfd 20%, transparent), color-mix(in srgb, #0e0e0e 40%, transparent)) !important;
   }
+}
+
+.urlbarView-row[type="search"] {
+  min-height: 50px !important;
 }
 
 #urlbar[open][zen-floating-urlbar="true"] {
