@@ -36,12 +36,16 @@ browser {
   opacity: 0.8;
 }
 
-.tabbrowser-tab[selected="true"]>.tab-stack>.tab-content>.tab-label-container>.tab-label {
+.tabbrowser-tab[selected="true"]
+  > .tab-stack
+  > .tab-content
+  > .tab-label-container
+  > .tab-label {
   font-weight: 800;
   opacity: 0.7;
 }
 
-#new-tab-button>.toolbarbutton-text {
+#new-tab-button > .toolbarbutton-text {
   font-weight: 700 !important;
   opacity: 0.5;
 }
@@ -55,7 +59,7 @@ browser {
   opacity: 0.7;
 }
 
-#urlbar-zoom-button>.toolbarbutton-text {
+#urlbar-zoom-button > .toolbarbutton-text {
   font-weight: 600;
   opacity: 0.4;
 }
@@ -63,11 +67,6 @@ browser {
 #identity-icon-label {
   opacity: 0.4;
   font-weight: 700;
-}
-
-/* Removes tab-reset button in pinned tabs */
-.tab-reset-button {
-  display: none !important;
 }
 
 /* Makes padding symmetrical in single toolbar mode */
@@ -90,19 +89,22 @@ browser {
 }
 
 /* Center align */
-#urlbar>.urlbar-input-container {
+#urlbar > .urlbar-input-container {
   align-self: center !important;
 }
 
 .urlbarView-body-inner {
-  #urlbar[open]>.urlbarView>.urlbarView-body-outer>& {
+  #urlbar[open] > .urlbarView > .urlbarView-body-outer > & {
     border-top: none !important;
   }
 }
 
 #urlbar:not([open]) {
   #urlbar-background {
-    background-color: light-dark(color-mix(in srgb, #ffffff 25%, transparent), color-mix(in srgb, #000000 25%, transparent)) !important;
+    background-color: light-dark(
+      color-mix(in srgb, #ffffff 25%, transparent),
+      color-mix(in srgb, #000000 25%, transparent)
+    ) !important;
   }
 
   #userContext-icons,
@@ -116,13 +118,23 @@ browser {
   #urlbar-background {
     margin: -5px !important;
     border: none !important;
-    background-color: light-dark(color-mix(in srgb, #fdfdfd 65%, transparent), color-mix(in srgb, #0e0e0e 75%, transparent)) !important;
+    background-color: light-dark(
+      color-mix(in srgb, #fdfdfd 65%, transparent),
+      color-mix(in srgb, #0e0e0e 75%, transparent)
+    ) !important;
     backdrop-filter: blur(15px) !important;
   }
 
   #urlbar-container:has(&) {
-    background: light-dark(color-mix(in srgb, #fdfdfd 20%, transparent), color-mix(in srgb, #0e0e0e 40%, transparent)) !important;
+    background: light-dark(
+      color-mix(in srgb, #fdfdfd 20%, transparent),
+      color-mix(in srgb, #0e0e0e 40%, transparent)
+    ) !important;
   }
+}
+
+.urlbarView-row[type="search"] {
+  min-height: 50px !important;
 }
 
 #urlbar[open][zen-floating-urlbar="true"] {
@@ -170,30 +182,24 @@ browser {
 /* === ESSENTIALS === */
 
 /* Colouring Essentials */
-#zen-essentials-container {
-  .tabbrowser-tab[pinned] .tab-background {
-    background-color: light-dark(rgba(255, 255, 255, 0.3), color-mix(in srgb, #000000 20%, transparent)) !important;
+
+#zen-essentials-container .tabbrowser-tab {
+  .tab-background {
+    background-color: light-dark(
+      color-mix(in srgb, #ffffff 65%, transparent),
+      color-mix(in srgb, #000000 25%, transparent)
+    ) !important;
   }
-}
 
-/* Based on code by https://github.com/greeeen-dev */
-#zen-essentials-container {
+  &:hover .tab-background {
+    background-color: light-dark(
+      color-mix(in srgb, #ffffff 55%, transparent),
+      color-mix(in srgb, #000000 35%, transparent)
+    ) !important;
+  }
+
   @media (-moz-bool-pref: "zen.theme.essentials-favicon-bg") {
-    .tab-background {
-      @media (prefers-color-scheme: light) {
-        &::before {
-          mask-image: none !important;
-          background-color: color-mix(in srgb, #ffffff 65%, transparent) !important;
-        }
-      }
-
-      @media (prefers-color-scheme: dark) {
-        &::before {
-          mask-image: none !important;
-          background-color: color-mix(in srgb, #000000 55%, transparent) !important;
-        }
-      }
-
+    &[visuallyselected] .tab-background {
       &::after {
         left: -50% !important;
         top: -50% !important;
@@ -201,6 +207,21 @@ browser {
         height: 200% !important;
         filter: blur (20px) !important;
       }
+
+      &::before {
+        mask-image: none !important;
+        background-color: light-dark(
+          color-mix(in srgb, #ffffff 65%, transparent),
+          color-mix(in srgb, #000000 55%, transparent)
+        ) !important;
+      }
+    }
+
+    &[visuallyselected]:hover .tab-background::before {
+      background-color: light-dark(
+        color-mix(in srgb, #ffffff 55%, transparent),
+        color-mix(in srgb, #000000 65%, transparent)
+      ) !important;
     }
   }
 }
@@ -214,17 +235,21 @@ browser {
   margin-left: 6px !important;
 }
 
-.tabbrowser-tab:not([zen-glance-tab="true"])>.tab-stack>.tab-background {
+.tabbrowser-tab:not([zen-glance-tab="true"]) > .tab-stack > .tab-background {
   height: 40px !important;
 }
 
-.tabbrowser-tab:not([zen-glance-tab="true"])>.tab-stack>.tab-content {
+.tabbrowser-tab:not([zen-glance-tab="true"]) > .tab-stack > .tab-content {
   margin-left: 5px !important;
   margin-right: 4px !important;
 }
 
 /* reduce favicon sizes */
-.tabbrowser-tab:not([zen-glance-tab="true"])>.tab-stack>.tab-content>.tab-icon-stack>.tab-icon-image:not([pinned]) {
+.tabbrowser-tab:not([zen-glance-tab="true"])
+  > .tab-stack
+  > .tab-content
+  > .tab-icon-stack
+  > .tab-icon-image:not([pinned]) {
   width: 14px !important;
   height: 14px !important;
   margin-left: 3.5px !important;
@@ -255,7 +280,10 @@ browser {
 
 /*When tabs are selected/active */
 .tabbrowser-tab .tab-background:is([selected], [multiselected]) {
-  background-color: light-dark(color-mix(in srgb, #fefefe 45%, transparent), color-mix(in srgb, #000000 35%, transparent)) !important;
+  background-color: light-dark(
+    color-mix(in srgb, #fefefe 45%, transparent),
+    color-mix(in srgb, #000000 35%, transparent)
+  ) !important;
 }
 
 /*Styling for Tab close button*/
@@ -268,16 +296,20 @@ browser {
 
 /*Tab close button colors, also for hover*/
 .close-icon {
-  background-color: color-mix(in srgb,
-      currentColor 10%,
-      transparent) !important;
+  background-color: color-mix(
+    in srgb,
+    currentColor 10%,
+    transparent
+  ) !important;
 }
 
 .close-icon:hover {
   transition: 0.5s !important;
-  background-color: color-mix(in srgb,
-      currentColor 20%,
-      transparent) !important;
+  background-color: color-mix(
+    in srgb,
+    currentColor 20%,
+    transparent
+  ) !important;
 }
 
 /* === PLAYING/MUTE ICON APPEARANCE CUSTOMIZATION === */
@@ -305,8 +337,8 @@ browser {
       margin: 0px 3px !important;
       background: white !important;
       /* svg modified from https://samherbert.net/svg-loaders/ */
-      --play-svg: url('data:image/svg+xml,%3Csvg%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%20135%20140%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22%22%3E%3Crect%20y%3D%2210%22%20width%3D%2215%22%20height%3D%22120%22%20rx%3D%226%22%3E%3Canimate%20attributeName%3D%22height%22%20begin%3D%220.5s%22%20dur%3D%221s%22%20values%3D%22120%3B110%3B100%3B90%3B80%3B70%3B60%3B50%3B40%3B140%3B120%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3Canimate%20attributeName%3D%22y%22%20begin%3D%220.5s%22%20dur%3D%221s%22%20values%3D%2210%3B15%3B20%3B25%3B30%3B35%3B40%3B45%3B50%3B0%3B10%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3C%2Frect%3E%3Crect%20x%3D%2230%22%20y%3D%2210%22%20width%3D%2215%22%20height%3D%22120%22%20rx%3D%226%22%3E%3Canimate%20attributeName%3D%22height%22%20begin%3D%220.25s%22%20dur%3D%221s%22%20values%3D%22120%3B110%3B100%3B90%3B80%3B70%3B60%3B50%3B40%3B140%3B120%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3Canimate%20attributeName%3D%22y%22%20begin%3D%220.25s%22%20dur%3D%221s%22%20values%3D%2210%3B15%3B20%3B25%3B30%3B35%3B40%3B45%3B50%3B0%3B10%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3C%2Frect%3E%3Crect%20x%3D%2260%22%20width%3D%2215%22%20height%3D%22140%22%20rx%3D%226%22%3E%3Canimate%20attributeName%3D%22height%22%20begin%3D%220s%22%20dur%3D%221s%22%20values%3D%22120%3B110%3B100%3B90%3B80%3B70%3B60%3B50%3B40%3B140%3B120%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3Canimate%20attributeName%3D%22y%22%20begin%3D%220s%22%20dur%3D%221s%22%20values%3D%2210%3B15%3B20%3B25%3B30%3B35%3B40%3B45%3B50%3B0%3B10%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3C%2Frect%3E%3Crect%20x%3D%2290%22%20y%3D%2210%22%20width%3D%2215%22%20height%3D%22120%22%20rx%3D%226%22%3E%3Canimate%20attributeName%3D%22height%22%20begin%3D%220.25s%22%20dur%3D%221s%22%20values%3D%22120%3B110%3B100%3B90%3B80%3B70%3B60%3B50%3B40%3B140%3B120%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3Canimate%20attributeName%3D%22y%22%20begin%3D%220.25s%22%20dur%3D%221s%22%20values%3D%2210%3B15%3B20%3B25%3B30%3B35%3B40%3B45%3B50%3B0%3B10%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3C%2Frect%3E%3Crect%20x%3D%22120%22%20y%3D%2210%22%20width%3D%2215%22%20height%3D%22120%22%20rx%3D%226%22%3E%3Canimate%20attributeName%3D%22height%22%20begin%3D%220.5s%22%20dur%3D%221s%22%20values%3D%22120%3B110%3B100%3B90%3B80%3B70%3B60%3B50%3B40%3B140%3B120%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3Canimate%20attributeName%3D%22y%22%20begin%3D%220.5s%22%20dur%3D%221s%22%20values%3D%2210%3B15%3B20%3B25%3B30%3B35%3B40%3B45%3B50%3B0%3B10%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3C%2Frect%3E%3C%2Fsvg%3E');
-      --mute-svg: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxMzYgMTQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9IiNmZmYiPjxyZWN0IHg9IjQiIHk9IjcwIiB3aWR0aD0iMTUiIGhlaWdodD0iMTUiIHJ4PSI2Ii8+PHJlY3QgeD0iMzQiIHk9IjcwIiB3aWR0aD0iMTUiIGhlaWdodD0iMTUiIHJ4PSI2Ii8+PHJlY3QgeD0iNjQiIHk9IjcwIiB3aWR0aD0iMTUiIGhlaWdodD0iMTUiIHJ4PSI2Ii8+PHJlY3QgeD0iOTQiIHk9IjcwIiB3aWR0aD0iMTUiIGhlaWdodD0iMTUiIHJ4PSI2Ii8+PHJlY3QgeD0iMTI0IiB5PSI3MCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjE1IiByeD0iNiIvPjwvc3ZnPg==');
+      --play-svg: url("data:image/svg+xml,%3Csvg%20width%3D%2214%22%20height%3D%2214%22%20viewBox%3D%220%200%20135%20140%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22%22%3E%3Crect%20y%3D%2210%22%20width%3D%2215%22%20height%3D%22120%22%20rx%3D%226%22%3E%3Canimate%20attributeName%3D%22height%22%20begin%3D%220.5s%22%20dur%3D%221s%22%20values%3D%22120%3B110%3B100%3B90%3B80%3B70%3B60%3B50%3B40%3B140%3B120%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3Canimate%20attributeName%3D%22y%22%20begin%3D%220.5s%22%20dur%3D%221s%22%20values%3D%2210%3B15%3B20%3B25%3B30%3B35%3B40%3B45%3B50%3B0%3B10%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3C%2Frect%3E%3Crect%20x%3D%2230%22%20y%3D%2210%22%20width%3D%2215%22%20height%3D%22120%22%20rx%3D%226%22%3E%3Canimate%20attributeName%3D%22height%22%20begin%3D%220.25s%22%20dur%3D%221s%22%20values%3D%22120%3B110%3B100%3B90%3B80%3B70%3B60%3B50%3B40%3B140%3B120%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3Canimate%20attributeName%3D%22y%22%20begin%3D%220.25s%22%20dur%3D%221s%22%20values%3D%2210%3B15%3B20%3B25%3B30%3B35%3B40%3B45%3B50%3B0%3B10%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3C%2Frect%3E%3Crect%20x%3D%2260%22%20width%3D%2215%22%20height%3D%22140%22%20rx%3D%226%22%3E%3Canimate%20attributeName%3D%22height%22%20begin%3D%220s%22%20dur%3D%221s%22%20values%3D%22120%3B110%3B100%3B90%3B80%3B70%3B60%3B50%3B40%3B140%3B120%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3Canimate%20attributeName%3D%22y%22%20begin%3D%220s%22%20dur%3D%221s%22%20values%3D%2210%3B15%3B20%3B25%3B30%3B35%3B40%3B45%3B50%3B0%3B10%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3C%2Frect%3E%3Crect%20x%3D%2290%22%20y%3D%2210%22%20width%3D%2215%22%20height%3D%22120%22%20rx%3D%226%22%3E%3Canimate%20attributeName%3D%22height%22%20begin%3D%220.25s%22%20dur%3D%221s%22%20values%3D%22120%3B110%3B100%3B90%3B80%3B70%3B60%3B50%3B40%3B140%3B120%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3Canimate%20attributeName%3D%22y%22%20begin%3D%220.25s%22%20dur%3D%221s%22%20values%3D%2210%3B15%3B20%3B25%3B30%3B35%3B40%3B45%3B50%3B0%3B10%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3C%2Frect%3E%3Crect%20x%3D%22120%22%20y%3D%2210%22%20width%3D%2215%22%20height%3D%22120%22%20rx%3D%226%22%3E%3Canimate%20attributeName%3D%22height%22%20begin%3D%220.5s%22%20dur%3D%221s%22%20values%3D%22120%3B110%3B100%3B90%3B80%3B70%3B60%3B50%3B40%3B140%3B120%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3Canimate%20attributeName%3D%22y%22%20begin%3D%220.5s%22%20dur%3D%221s%22%20values%3D%2210%3B15%3B20%3B25%3B30%3B35%3B40%3B45%3B50%3B0%3B10%22%20calcMode%3D%22linear%22%20repeatCount%3D%22indefinite%22%2F%3E%3C%2Frect%3E%3C%2Fsvg%3E");
+      --mute-svg: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxMzYgMTQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9IiNmZmYiPjxyZWN0IHg9IjQiIHk9IjcwIiB3aWR0aD0iMTUiIGhlaWdodD0iMTUiIHJ4PSI2Ii8+PHJlY3QgeD0iMzQiIHk9IjcwIiB3aWR0aD0iMTUiIGhlaWdodD0iMTUiIHJ4PSI2Ii8+PHJlY3QgeD0iNjQiIHk9IjcwIiB3aWR0aD0iMTUiIGhlaWdodD0iMTUiIHJ4PSI2Ii8+PHJlY3QgeD0iOTQiIHk9IjcwIiB3aWR0aD0iMTUiIGhlaWdodD0iMTUiIHJ4PSI2Ii8+PHJlY3QgeD0iMTI0IiB5PSI3MCIgd2lkdGg9IjE1IiBoZWlnaHQ9IjE1IiByeD0iNiIvPjwvc3ZnPg==");
       mask-size: 10px 10px !important;
       mask-repeat: no-repeat !important;
       mask-position: center !important;
@@ -338,18 +370,19 @@ browser {
   }
 
   @media not (-moz-bool-pref: "zen.view.sidebar-expanded") {
-    .tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]):hover img {
+    .tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]):hover
+      img {
       opacity: 1 !important;
       transition: opacity 0.1s ease-out !important;
     }
 
-    .tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]):hover .tab-icon-overlay {
+    .tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]):hover
+      .tab-icon-overlay {
       margin: 0px !important;
       transition: opacity 0.1s ease-out, transform 0.1s ease-out !important;
       transform: translate(6.9px, -6.9px) scale(0.69) !important;
     }
   }
-
 
   #zen-essentials-container {
     .tab-icon-overlay:is([soundplaying], [muted], [activemedia-blocked]) {
@@ -394,7 +427,10 @@ browser {
   padding-bottom: 6px;
   margin-right: 6px !important;
   margin-left: 1px !important;
-  background: light-dark(rgba(255, 255, 255, 0.11), rgba(0, 0, 0, 0.2)) !important;
+  background: light-dark(
+    rgba(255, 255, 255, 0.11),
+    rgba(0, 0, 0, 0.2)
+  ) !important;
 }
 
 /* Transparent Findbar */
@@ -405,7 +441,10 @@ findbar {
 
 /* Cleaned & Transparent Sidebar */
 #sidebar-box {
-  background-color: light-dark(rgba(255, 255, 255, 0.11), rgba(0, 0, 0, 0.2)) !important;
+  background-color: light-dark(
+    rgba(255, 255, 255, 0.11),
+    rgba(0, 0, 0, 0.2)
+  ) !important;
   border: none !important;
 
   & #sidebar-header {
@@ -418,7 +457,7 @@ findbar {
 }
 
 /* Transparent Search box in sidebar */
-#sidebar-search-container>#search-box,
+#sidebar-search-container > #search-box,
 #viewButton {
   padding: 4px 8px !important;
 
@@ -442,7 +481,6 @@ findbar {
   padding: 5px !important;
   border-bottom: 0 solid var(--sidebar-border-color) !important;
 }
-
 
 /* === BLUR COMPACT SIDEBAR === */
 /* Based on code by https://github.com/Tanay-Kar */
