@@ -145,6 +145,10 @@ browser {
     width: 200vw;
     height: 100vh;
     top: 0px;
+    @media (-moz-bool-pref: "lacuna.urlbar.smaller-compact-mode") {
+      height: 112.5vh;
+      top: -12.5vh;
+    }
     left: -50px;
     backdrop-filter: blur(2px) brightness(80%);
     z-index: -1;
