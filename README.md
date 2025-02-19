@@ -95,6 +95,7 @@
 These are a few configs which will allow you to control certain features of lacuna
 - `lacuna.sidebar.compact-transparent`  : Enables transparent compact mode sidebar
 - `lacuna.tab.default-audio-indicator`  : Disables custom audio indicator in favour of the default one
+- `lacuna.tab.pined-tabs-bg` : Makes pinned tabs background look similar to essentials
 
 > [!Note]
 > You'd have to create these configs yourself in about:config. All configs are of type `boolean` unless mentioned otherwise
