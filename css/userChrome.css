@@ -32,7 +32,7 @@ browser {
 /* === UI FONT-WEIGHT & OPACITY === */
 
 .tab-label {
-  font-weight: 600;
+  font-weight: 700;
   opacity: 0.8;
 }
 
@@ -41,7 +41,7 @@ browser {
   > .tab-content
   > .tab-label-container
   > .tab-label {
-  font-weight: 800;
+  font-weight: 700;
   opacity: 0.7;
 }
 
@@ -185,17 +185,11 @@ browser {
 
 #zen-essentials-container .tabbrowser-tab {
   .tab-background {
-    background-color: light-dark(
-      color-mix(in srgb, #ffffff 65%, transparent),
-      color-mix(in srgb, #000000 25%, transparent)
-    ) !important;
+    background-color: light-dark(rgba(255,255,255,0.25),rgba(0,0,0,0.25)) !important;
   }
 
   &:hover .tab-background {
-    background-color: light-dark(
-      color-mix(in srgb, #ffffff 55%, transparent),
-      color-mix(in srgb, #000000 35%, transparent)
-    ) !important;
+    background-color: light-dark(rgba(255,255,255,0.45),rgba(0,0,0,0.45)) !important;
   }
 
   @media (-moz-bool-pref: "zen.theme.essentials-favicon-bg") {
@@ -276,6 +270,18 @@ browser {
 .tabbrowser-tab .tab-background {
   transition: background-color 0.3s ease;
   box-shadow: none !important;
+}
+
+@media (-moz-bool-pref: "lacuna.tab.pined-tabs-bg"){
+  .tabbrowser-tab[pinned]:not([zen-essential="true"]){
+    .tab-background {
+      background-color: light-dark(rgba(255,255,255,0.25),rgba(0,0,0,0.25)) !important;
+    }
+
+    &:hover .tab-background {
+      background-color: light-dark(rgba(255,255,255,0.45),rgba(0,0,0,0.45)) !important;
+    }
+  }
 }
 
 /*When tabs are selected/active */
@@ -499,4 +505,45 @@ findbar {
 #zen-sidebar-web-panel {
   background: light-dark(#00000022, #00000044) !important;
   backdrop-filter: blur(40px) !important;
+}
+
+/* === BETTER CUSTOMIZE TOOLBAR === */
+/* Based on code by https://github.com/Tanay-Kar */
+
+#customization-container {
+  position: absolute;
+  z-index: 10;
+  bottom: 10px;
+  right: 10px;
+  height: 80%;
+  width: 70%;
+  border-radius: 12px;
+  
+  padding: 10px;
+  background: light-dark(rgba(255,255,255,0.32),rgba(0,0,0,0.3)) !important;
+}
+@media (-moz-bool-pref: "zen.tabs.vertical.right-side") {
+  #customization-container {
+    left: 10px;
+  }
+  
+  #customization-container #customization-content-container {
+    flex-direction: row-reverse;
+  }
+}
+#customization-container #customization-panel-container {
+  padding: 10px !important;
+}
+#customization-container #customization-panelWrapper {
+  --panel-arrow-offset: 0px;
+}
+#customization-container .panel-arrowbox {
+  display: none !important;
+}
+#customization-container .panel-arrowcontent {
+  height: 100% !important;
+  background: light-dark(rgba(255,255,255,0.8),rgba(0,0,0,0.4)) !important;
+  border: none !important;
+  margin: 0px !important;
+  border-radius: 8px;
 }
