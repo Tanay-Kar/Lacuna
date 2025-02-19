@@ -32,7 +32,7 @@ browser {
 /* === UI FONT-WEIGHT & OPACITY === */
 
 .tab-label {
-  font-weight: 600;
+  font-weight: 700;
   opacity: 0.8;
 }
 
@@ -41,7 +41,7 @@ browser {
   > .tab-content
   > .tab-label-container
   > .tab-label {
-  font-weight: 800;
+  font-weight: 700;
   opacity: 0.7;
 }
 
