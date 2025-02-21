@@ -14,17 +14,20 @@
 ## Features
 
 ### Clean look
-![clean](https://github.com/user-attachments/assets/7f931baf-8181-4a33-93bc-9c8fbedb0029)
+![clean](https://github.com/user-attachments/assets/4bba9ff8-12e0-4796-ad22-f8d4d14a9b71)
 
 ### Cohesive design
-![cohesion](https://github.com/user-attachments/assets/d802d3fd-0705-459f-a463-0a57d00f613c)
+![cohesive](https://github.com/user-attachments/assets/4b047fc5-0ff2-455f-bfb6-fec145807541)
 <br>credit: [Cohesion](https://github.com/TheBigWazz/ZenThemes/tree/main/Cohesion)
 
 ### Minimal search bar
-![search](https://github.com/user-attachments/assets/908f5b9f-1a62-421a-a667-ba7e29fd75a3)
+![search](https://github.com/user-attachments/assets/9d7bba5a-589b-4892-97e4-1516a39c77d7)
 
 ### Blurred UI
-![blur](https://github.com/user-attachments/assets/c1273834-c075-415c-b498-aad5baefe7f7)
+![Screenshot From 2025-02-21 17-13-10](https://github.com/user-attachments/assets/0d379129-bfbe-4b7e-8434-3db5d76e7545)
+
+## Better toolbar customization UI
+![Screenshot From 2025-02-21 16-35-35](https://github.com/user-attachments/assets/a15dae8c-ba55-41f8-bd8b-4904b56796e1)
 
 ### Better PDF reader UI
 ![pdfreader](https://github.com/user-attachments/assets/bdb20a89-b21f-4a2e-b42f-28bd5dec1c1c)
