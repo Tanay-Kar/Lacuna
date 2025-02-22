@@ -37,15 +37,17 @@
 ## Installation
 #### 1. Installing css
 - If you have not already, follow the [Zen Live Editing](https://docs.zen-browser.app/guides/live-editing) guide to first create your **chrome** folder.
-- Download this repository and copy the contents of the `lacuna.css` to your `userChrome.css`
-- Copy the `userContent.css` to the same folder.
+- Copy `lacuna.css` to the chrome folder and add the following snippet to the top of your `userChrome.css`
+
+  ```css
+  @import "lacuna.css";
+  ```
+- Copy the `css/userContent.css` to the same folder.
 - Restart the browser
 
 #### 2. Required Mods
 <b>
   
-- [Animations Plus](https://zen-browser.app/mods/f4866f39-cfd6-4498-ab92-54213b8279dc)
-
 - [Better Find Bar](https://zen-browser.app/mods/a6335949-4465-4b71-926c-4a52d34bc9c0)
   
 - [Load Bar](https://zen-browser.app/mods/ae7868dc-1fa1-469e-8b89-a5edf7ab1f24)
@@ -67,15 +69,6 @@
   - Install [Bonjourr](https://addons.mozilla.org/en-US/firefox/addon/bonjourr-startpage/) from the Firefox Add-ons Store
   - Import the config file [bonjourr.json](./misc/bonjourr.json)
 
-##### **Setting up Short URL**
-
-  > [!Warning]
-  > Installing a userChrome js loader makes your browser vulnerable to **external malicious code** running without elevated permissions. <br>
-  > Unless you are confident in your technical knowledge, **do not proceed**.
-    
-  - Follow the detailed steps provided in the [fx-autoconfig](https://github.com/MrOtherGuy/fx-autoconfig) repository to configure custom scripts in your browser.
-  - Copy the files in `./js/` folder to your `chrome/JS/` folder.
-  - Clear your zen's startup cache and restart the browser.
 
 #### 4. Recommended configs
 | Config                                    | Value |
@@ -105,5 +98,4 @@ These are a few configs which will allow you to control certain features of lacu
 Thank you to:
 - [greeeen-dev](https://github.com/greeeen-dev) for the amazing work in [Natsumi Browser](https://github.com/greeeen-dev/natsumi-browser)
 - [TheBigWazz](https://github.com/TheBigWazz) for the incredible work in [Cohesion](https://github.com/TheBigWazz/ZenThemes/tree/main/Cohesion)
-- [vicky5124](https://github.com/vicky5124) for the Tab Groups CSS
 - [mr-cheff](https://github.com/mr-cheff) and Zen's [contributors](https://github.com/zen-browser/desktop/graphs/contributors) for creating Zen Browser
