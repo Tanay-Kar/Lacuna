@@ -37,7 +37,7 @@
 ## Installation
 #### 1. Installing css
 - If you have not already, follow the [Zen Live Editing](https://docs.zen-browser.app/guides/live-editing) guide to first create your **chrome** folder.
-- Download this repository and copy the contents of the `css/` folder into your `chrome` folder.
+- Download this repository and copy the contents of the `lacuna.css` to your `userChrome.css`
 
 > [!Note]
 > This will **replace** your previous `userChrome.css`.
