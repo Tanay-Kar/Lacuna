@@ -38,11 +38,7 @@
 #### 1. Installing css
 - If you have not already, follow the [Zen Live Editing](https://docs.zen-browser.app/guides/live-editing) guide to first create your **chrome** folder.
 - Download this repository and copy the contents of the `lacuna.css` to your `userChrome.css`
-
-> [!Note]
-> This will **replace** your previous `userChrome.css`.
-> Back up your previous userChrome.css and paste its contents below Lacuna's userChrome.css.
-
+- Copy the `userContent.css` to the same folder.
 - Restart the browser
 
 #### 2. Required Mods
