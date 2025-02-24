@@ -19,10 +19,6 @@ browser {
   letter-spacing: 0.2px !important;
 }
 
-:root {
-  --attention-dot-color: transparent !important;
-}
-
 /* === WEBPANEL BG GRADIENT & MAX WIDTH === */
 #zen-sidebar-web-panel {
   max-width: 100% !important;
