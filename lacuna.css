@@ -106,12 +106,6 @@ browser {
       color-mix(in srgb, #000000 25%, transparent)
     ) !important;
   }
-
-  #userContext-icons,
-  #identity-icon-box,
-  #urlbar-zoom-button {
-    display: none !important;
-  }
 }
 
 #urlbar[open][zen-floating-urlbar="true"] {
