@@ -96,11 +96,31 @@ browser {
 }
 
 #urlbar:not([open]) {
+  transition: opacity ease-in-out 5s;
   #urlbar-background {
-    background-color: light-dark(
-      color-mix(in srgb, #ffffff 25%, transparent),
-      color-mix(in srgb, #000000 25%, transparent)
-    ) !important;
+    background-color: light-dark(color-mix(in srgb, #ffffff 25%, transparent),color-mix(in srgb, #000000 25%, transparent)) !important;
+  }
+  
+  #urlbar-zoom-button {
+    display: none !important;
+  }
+  
+  &:not(:hover) {
+    #userContext-icons,
+    #identity-permission-box,
+    #identity-icon-box {
+      margin-inline-start: calc(-8px - 2 * var(--urlbar-icon-padding)) !important;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.1s ease;
+    }
+  }
+  &:hover {
+    #userContext-icons,
+    #identity-permission-box,
+    #identity-icon-box {
+      transform: none !important;
+    }
   }
 }
 
