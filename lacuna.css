@@ -124,10 +124,20 @@ browser {
   }
 }
 
+/* Focus Blur */
+#zen-tabbox-wrapper {
+  transition: filter 0.1s ease-in-out !important;
+}
+
+#browser:has(#urlbar[open]) #zen-tabbox-wrapper {
+  filter: blur(4px) brightness(80%) !important;
+}
+
 #urlbar[open][zen-floating-urlbar="true"] {
   #urlbar-background {
     margin: -5px !important;
     border: none !important;
+    background-color: light-dark(color-mix(in srgb, #fdfdfd 75%, transparent), color-mix(in srgb, #0e0e0e 75%, transparent)) !important;
   }
   #urlbar-container:has(&) {
     background: light-dark(color-mix(in srgb, #fdfdfd 20%, transparent), color-mix(in srgb, #0e0e0e 40%, transparent)) !important;
@@ -137,7 +147,6 @@ browser {
 :root:not([zen-compact-mode="true"]) {
   #urlbar[open][zen-floating-urlbar="true"] {
     #urlbar-background {
-      background-color: light-dark(color-mix(in srgb, #fdfdfd 65%, transparent), color-mix(in srgb, #0e0e0e 75%, transparent)) !important;
       backdrop-filter: blur(15px) !important;
     }
   }
