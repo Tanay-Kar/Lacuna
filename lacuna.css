@@ -13,10 +13,14 @@ browser {
 
 /* === GENERAL UI RULES === */
 
-* {
-  font-family: "Roboto", sans-serif !important;
-  font-size: 11px !important;
-  letter-spacing: 0.2px !important;
+@media (-moz-bool-pref: "lacuna.ui.force-font") {
+  * {
+    --strict-font-size: 11px;
+    --strict-font-family: "Roboto", sans-serif;
+    font-family: var(--strict-font-family) !important;
+    font-size: var(--strict-font-size) !important;
+    letter-spacing: 0.2px !important;
+  }
 }
 
 /* === WEBPANEL BG GRADIENT & MAX WIDTH === */
@@ -96,18 +100,48 @@ browser {
 }
 
 #urlbar:not([open]) {
+  transition: opacity ease-in-out 5s;
   #urlbar-background {
-    background-color: light-dark(
-      color-mix(in srgb, #ffffff 25%, transparent),
-      color-mix(in srgb, #000000 25%, transparent)
-    ) !important;
+    background-color: light-dark(color-mix(in srgb, #ffffff 25%, transparent),color-mix(in srgb, #000000 25%, transparent)) !important;
   }
+  
+  #urlbar-zoom-button {
+    display: none !important;
+  }
+  
+  &:not(:hover) {
+    #userContext-icons,
+    #identity-permission-box,
+    #identity-icon-box {
+      margin-inline-start: calc(-8px - 2 * var(--urlbar-icon-padding)) !important;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.1s ease;
+    }
+  }
+  &:hover {
+    #userContext-icons,
+    #identity-permission-box,
+    #identity-icon-box {
+      transform: none !important;
+    }
+  }
+}
+
+/* Focus Blur */
+#zen-tabbox-wrapper {
+  transition: filter 0.1s ease-in-out !important;
+}
+
+#browser:has(#urlbar[open]) #zen-tabbox-wrapper {
+  filter: blur(4px) brightness(80%) !important;
 }
 
 #urlbar[open][zen-floating-urlbar="true"] {
   #urlbar-background {
     margin: -5px !important;
     border: none !important;
+    background-color: light-dark(color-mix(in srgb, #fdfdfd 75%, transparent), color-mix(in srgb, #0e0e0e 75%, transparent)) !important;
   }
   #urlbar-container:has(&) {
     background: light-dark(color-mix(in srgb, #fdfdfd 20%, transparent), color-mix(in srgb, #0e0e0e 40%, transparent)) !important;
@@ -117,7 +151,6 @@ browser {
 :root:not([zen-compact-mode="true"]) {
   #urlbar[open][zen-floating-urlbar="true"] {
     #urlbar-background {
-      background-color: light-dark(color-mix(in srgb, #fdfdfd 65%, transparent), color-mix(in srgb, #0e0e0e 75%, transparent)) !important;
       backdrop-filter: blur(15px) !important;
     }
   }
@@ -237,6 +270,11 @@ browser {
 .tabbrowser-tab .tab-background {
   transition: background-color 0.3s ease;
   box-shadow: none !important;
+}
+
+/* Bottom fade for tabs overflow */
+#zen-tabs-wrapper {
+    mask-image: linear-gradient(to top, transparent, black 20px) !important;
 }
 
 @media (-moz-bool-pref: "lacuna.tab.pined-tabs-bg"){
