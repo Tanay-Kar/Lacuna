@@ -13,10 +13,14 @@ browser {
 
 /* === GENERAL UI RULES === */
 
-* {
-  font-family: "Roboto", sans-serif !important;
-  font-size: 11px !important;
-  letter-spacing: 0.2px !important;
+@media (-moz-bool-pref: "lacuna.ui.force-font") {
+  * {
+    --strict-font-size: 11px;
+    --strict-font-family: "Roboto", sans-serif;
+    font-family: var(--strict-font-family) !important;
+    font-size: var(--strict-font-size) !important;
+    letter-spacing: 0.2px !important;
+  }
 }
 
 /* === WEBPANEL BG GRADIENT & MAX WIDTH === */
