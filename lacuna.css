@@ -238,11 +238,6 @@ browser[transparent='true'] {
   height: 40px !important;
 }
 
-.tabbrowser-tab:not([zen-glance-tab="true"]) > .tab-stack > .tab-content {
-  margin-left: 5px !important;
-  margin-right: 4px !important;
-}
-
 /* reduce favicon sizes */
 .tabbrowser-tab:not([zen-glance-tab="true"])
   > .tab-stack
