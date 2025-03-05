@@ -89,6 +89,7 @@ These are a few configs which will allow you to control certain features of lacu
 - `lacuna.tab.default-audio-indicator`  : Disables custom audio indicator in favour of the default one
 - `lacuna.tab.pined-tabs-bg` : Makes pinned tabs background look similar to essentials
 - `lacuna.urlbar.smaller-compact-mode` : Fixes url bar blur with *Smaller Compact Mode* mod
+- `lacuna.ui.force-font` : Forces a defined font across UI
 
 > [!Note]
 > You'd have to create these configs yourself in about:config. All configs are of type `boolean` unless mentioned otherwise
