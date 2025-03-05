@@ -25,7 +25,7 @@ browser {
 
 /* State-less Tab background */
 browser[transparent='true'] {
-  background: light-dark(#ffffff33, #00000033) !important;
+  background: light-dark(#00000011, #ffffff09) !important;
 }
 
 /* === WEBPANEL BG GRADIENT & MAX WIDTH === */
