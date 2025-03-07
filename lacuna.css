@@ -171,7 +171,6 @@ browser[transparent='true'] {
 #zen-sidebar-top-buttons,
 #zen-sidebar-top-buttons-customization-target {
   & toolbarbutton:not(.titlebar-button) {
-    padding: 0px !important;
     margin-top: -4px !important;
     scale: 0.84;
   }
