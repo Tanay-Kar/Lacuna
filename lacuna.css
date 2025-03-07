@@ -6,11 +6,6 @@
  *
  */
 
-browser {
-  /* Needed for blur */
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
-
 /* === GENERAL UI RULES === */
 
 @media (-moz-bool-pref: "lacuna.ui.force-font") {
