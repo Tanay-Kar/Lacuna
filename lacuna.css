@@ -74,9 +74,11 @@ browser[transparent='true'] {
   font-weight: 700;
 }
 
-/* Makes padding symmetrical in single toolbar mode */
-#zen-essentials-container {
-  margin-bottom: 6px !important;
+/* Makes padding symmetrical in single toolbar mode with top workspace indicator hidden */
+@media not (-moz-bool-pref: "zen.workspaces.show-workspace-indicator") {
+  #zen-essentials-container {
+    margin-bottom: var(--zen-toolbox-padding) !important;
+  }
 }
 
 /* === URL BAR CUSTOMIZATION === */
