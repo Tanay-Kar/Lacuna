@@ -153,7 +153,7 @@ browser[transparent='true'] {
 :root:not([zen-compact-mode="true"]) {
   #urlbar[open][zen-floating-urlbar="true"] {
     #urlbar-background {
-      backdrop-filter: blur(15px) !important;
+      backdrop-filter: blur(20px) !important;
     }
   }
 }
