@@ -23,6 +23,12 @@ browser[transparent='true'] {
   background: light-dark(#ffffff33, #ffffff09) !important;
 }
 
+/* Based on code by Verix */
+/* Hide all results after the 6th one */
+#urlbar[open] #urlbar-results>*:nth-child(n+6) {
+  display: none !important;
+}
+
 /* === WEBPANEL BG GRADIENT & MAX WIDTH === */
 #zen-sidebar-web-panel {
   max-width: 100% !important;
@@ -554,12 +560,4 @@ findbar {
   border: none !important;
   margin: 0px !important;
   border-radius: 8px;
-}
-
-
-/* Check when the width is low */
-@media (max-width: 700px) { /* Adjust the threshold as needed */
-  #customization-container {
-    border: 2px solid red; /* Temporary visual indicator */
-  }
 }
