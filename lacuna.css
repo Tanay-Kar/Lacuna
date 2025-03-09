@@ -326,7 +326,7 @@ browser[transparent='true'] {
 }
 
 /* === PLAYING/MUTE ICON APPEARANCE CUSTOMIZATION === */
-/* Based on code by https://github.com/itsmefen */
+/* Based on code by https://github.com/Tanay-Kar */
 
 @media not (-moz-bool-pref: "lacuna.tab.default-audio-indicator") {
   .tabbrowser-tab img {
