@@ -42,16 +42,12 @@ browser[transparent='true'] {
   opacity: 0.8;
 }
 
-.tabbrowser-tab[selected="true"]
-  > .tab-stack
-  > .tab-content
-  > .tab-label-container
-  > .tab-label {
+.tabbrowser-tab[selected="true"]>.tab-stack>.tab-content>.tab-label-container>.tab-label {
   font-weight: 700;
   opacity: 0.7;
 }
 
-#new-tab-button > .toolbarbutton-text {
+#new-tab-button>.toolbarbutton-text {
   font-weight: 700 !important;
   opacity: 0.5;
 }
@@ -65,7 +61,7 @@ browser[transparent='true'] {
   opacity: 0.7;
 }
 
-#urlbar-zoom-button > .toolbarbutton-text {
+#urlbar-zoom-button>.toolbarbutton-text {
   font-weight: 600;
   opacity: 0.4;
 }
@@ -97,37 +93,41 @@ browser[transparent='true'] {
 }
 
 /* Center align */
-#urlbar > .urlbar-input-container {
+#urlbar>.urlbar-input-container {
   align-self: center !important;
 }
 
 .urlbarView-body-inner {
-  #urlbar[open] > .urlbarView > .urlbarView-body-outer > & {
+  #urlbar[open]>.urlbarView>.urlbarView-body-outer>& {
     border-top: none !important;
   }
 }
 
 #urlbar:not([open]) {
   transition: opacity ease-in-out 5s;
+
   #urlbar-background {
-    background-color: light-dark(color-mix(in srgb, #ffffff 25%, transparent),color-mix(in srgb, #000000 25%, transparent)) !important;
+    background-color: light-dark(color-mix(in srgb, #ffffff 25%, transparent), color-mix(in srgb, #000000 25%, transparent)) !important;
   }
-  
+
   #urlbar-zoom-button {
     display: none !important;
   }
-  
+
   &:not(:hover) {
+
     #userContext-icons,
     #identity-permission-box,
     #identity-icon-box {
       margin-inline-start: calc(-8px - 2 * var(--urlbar-icon-padding)) !important;
-    transform: translateX(100%);
-    opacity: 0;
-    transition: all 0.1s ease;
+      transform: translateX(100%);
+      opacity: 0;
+      transition: all 0.1s ease;
     }
   }
+
   &:hover {
+
     #userContext-icons,
     #identity-permission-box,
     #identity-icon-box {
@@ -151,6 +151,7 @@ browser[transparent='true'] {
     border: none !important;
     background-color: light-dark(color-mix(in srgb, #fdfdfd 75%, transparent), color-mix(in srgb, #0e0e0e 75%, transparent)) !important;
   }
+
   #urlbar-container:has(&) {
     background: light-dark(color-mix(in srgb, #fdfdfd 20%, transparent), color-mix(in srgb, #0e0e0e 40%, transparent)) !important;
   }
@@ -192,11 +193,11 @@ browser[transparent='true'] {
 
 #zen-essentials-container .tabbrowser-tab {
   .tab-background {
-    background-color: light-dark(rgba(255,255,255,0.25),rgba(0,0,0,0.25)) !important;
+    background-color: light-dark(rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.25)) !important;
   }
 
   &:hover .tab-background {
-    background-color: light-dark(rgba(255,255,255,0.45),rgba(0,0,0,0.45)) !important;
+    background-color: light-dark(rgba(255, 255, 255, 0.45), rgba(0, 0, 0, 0.45)) !important;
   }
 
   @media (-moz-bool-pref: "zen.theme.essentials-favicon-bg") {
@@ -211,18 +212,14 @@ browser[transparent='true'] {
 
       &::before {
         mask-image: none !important;
-        background-color: light-dark(
-          color-mix(in srgb, #ffffff 65%, transparent),
-          color-mix(in srgb, #000000 55%, transparent)
-        ) !important;
+        background-color: light-dark(color-mix(in srgb, #ffffff 65%, transparent),
+            color-mix(in srgb, #000000 55%, transparent)) !important;
       }
     }
 
     &[visuallyselected]:hover .tab-background::before {
-      background-color: light-dark(
-        color-mix(in srgb, #ffffff 55%, transparent),
-        color-mix(in srgb, #000000 65%, transparent)
-      ) !important;
+      background-color: light-dark(color-mix(in srgb, #ffffff 55%, transparent),
+          color-mix(in srgb, #000000 65%, transparent)) !important;
     }
   }
 }
@@ -236,16 +233,12 @@ browser[transparent='true'] {
   margin-left: 6px !important;
 }
 
-.tabbrowser-tab:not([zen-glance-tab="true"]) > .tab-stack > .tab-background {
+.tabbrowser-tab:not([zen-glance-tab="true"])>.tab-stack>.tab-background {
   height: 40px !important;
 }
 
 /* reduce favicon sizes */
-.tabbrowser-tab:not([zen-glance-tab="true"])
-  > .tab-stack
-  > .tab-content
-  > .tab-icon-stack
-  > .tab-icon-image:not([pinned]) {
+.tabbrowser-tab:not([zen-glance-tab="true"])>.tab-stack>.tab-content>.tab-icon-stack>.tab-icon-image:not([pinned]) {
   width: 14px !important;
   height: 14px !important;
   margin-left: 3.5px !important;
@@ -276,27 +269,25 @@ browser[transparent='true'] {
 
 /* Bottom fade for tabs overflow */
 #zen-tabs-wrapper {
-    mask-image: linear-gradient(to top, transparent, black 20px) !important;
+  mask-image: linear-gradient(to top, transparent, black 20px) !important;
 }
 
-@media (-moz-bool-pref: "lacuna.tab.pined-tabs-bg"){
-  .tabbrowser-tab[pinned]:not([zen-essential="true"]){
+@media (-moz-bool-pref: "lacuna.tab.pined-tabs-bg") {
+  .tabbrowser-tab[pinned]:not([zen-essential="true"]) {
     .tab-background {
-      background-color: light-dark(rgba(255,255,255,0.25),rgba(0,0,0,0.25)) !important;
+      background-color: light-dark(rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.25)) !important;
     }
 
     &:hover .tab-background {
-      background-color: light-dark(rgba(255,255,255,0.45),rgba(0,0,0,0.45)) !important;
+      background-color: light-dark(rgba(255, 255, 255, 0.45), rgba(0, 0, 0, 0.45)) !important;
     }
   }
 }
 
 /*When tabs are selected/active */
 .tabbrowser-tab .tab-background:is([selected], [multiselected]) {
-  background-color: light-dark(
-    color-mix(in srgb, #fefefe 45%, transparent),
-    color-mix(in srgb, #000000 35%, transparent)
-  ) !important;
+  background-color: light-dark(color-mix(in srgb, #fefefe 45%, transparent),
+      color-mix(in srgb, #000000 35%, transparent)) !important;
 }
 
 /*Styling for Tab close button*/
@@ -309,20 +300,16 @@ browser[transparent='true'] {
 
 /*Tab close button colors, also for hover*/
 .close-icon {
-  background-color: color-mix(
-    in srgb,
-    currentColor 10%,
-    transparent
-  ) !important;
+  background-color: color-mix(in srgb,
+      currentColor 10%,
+      transparent) !important;
 }
 
 .close-icon:hover {
   transition: 0.5s !important;
-  background-color: color-mix(
-    in srgb,
-    currentColor 20%,
-    transparent
-  ) !important;
+  background-color: color-mix(in srgb,
+      currentColor 20%,
+      transparent) !important;
 }
 
 /* === PLAYING/MUTE ICON APPEARANCE CUSTOMIZATION === */
@@ -382,15 +369,26 @@ browser[transparent='true'] {
     }
   }
 
-  @media not (-moz-bool-pref: "zen.view.sidebar-expanded") {
-    .tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]):hover
-      img {
+  #zen-essentials-container {
+    .tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]):hover img {
       opacity: 1 !important;
       transition: opacity 0.1s ease-out !important;
     }
 
-    .tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]):hover
-      .tab-icon-overlay {
+    .tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]):hover .tab-icon-overlay {
+      margin: 0px !important;
+      transition: opacity 0.1s ease-out, transform 0.1s ease-out !important;
+      transform: translate(6.9px, -6.9px) scale(0.69) !important;
+    }
+  }
+
+  @media not (-moz-bool-pref: "zen.view.sidebar-expanded") {
+    .tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]):hover img {
+      opacity: 1 !important;
+      transition: opacity 0.1s ease-out !important;
+    }
+
+    .tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]):hover .tab-icon-overlay {
       margin: 0px !important;
       transition: opacity 0.1s ease-out, transform 0.1s ease-out !important;
       transform: translate(6.9px, -6.9px) scale(0.69) !important;
@@ -440,10 +438,8 @@ browser[transparent='true'] {
   padding-bottom: 6px;
   margin-right: 6px !important;
   margin-left: 1px !important;
-  background: light-dark(
-    rgba(255, 255, 255, 0.11),
-    rgba(0, 0, 0, 0.2)
-  ) !important;
+  background: light-dark(rgba(255, 255, 255, 0.11),
+      rgba(0, 0, 0, 0.2)) !important;
 }
 
 /* Transparent Findbar */
@@ -454,10 +450,8 @@ findbar {
 
 /* Cleaned & Transparent Sidebar */
 #sidebar-box {
-  background-color: light-dark(
-    rgba(255, 255, 255, 0.11),
-    rgba(0, 0, 0, 0.2)
-  ) !important;
+  background-color: light-dark(rgba(255, 255, 255, 0.11),
+      rgba(0, 0, 0, 0.2)) !important;
   border: none !important;
 
   & #sidebar-header {
@@ -470,7 +464,7 @@ findbar {
 }
 
 /* Transparent Search box in sidebar */
-#sidebar-search-container > #search-box,
+#sidebar-search-container>#search-box,
 #viewButton {
   padding: 4px 8px !important;
 
@@ -501,10 +495,12 @@ findbar {
 :root[zen-compact-mode="true"] {
   #navigator-toolbox #titlebar {
     @media (-moz-bool-pref: "lacuna.sidebar.compact-transparent") {
-      background: light-dark(#99999944,#00000044) !important;
+      background: light-dark(#99999944, #00000044) !important;
     }
+
     border: none !important;
   }
+
   #navigator-toolbox:not(:has(#urlbar[zen-floating-urlbar='true'][open])) #titlebar {
     backdrop-filter: blur(10px) !important;
   }
@@ -526,16 +522,16 @@ findbar {
   height: 80%;
   width: 70%;
   border-radius: 12px;
- 
+
   padding: 10px;
-  background: light-dark(rgba(255,255,255,0.32),rgba(0,0,0,0.3)) !important;
+  background: light-dark(rgba(255, 255, 255, 0.32), rgba(0, 0, 0, 0.3)) !important;
 }
 
 @media (-moz-bool-pref: "zen.tabs.vertical.right-side") {
   #customization-container {
     left: 10px;
   }
- 
+
   #customization-container #customization-content-container {
     flex-direction: row-reverse;
   }
@@ -556,7 +552,7 @@ findbar {
 
 #customization-container .panel-arrowcontent {
   height: 100% !important;
-  background: light-dark(rgba(255,255,255,0.8),rgba(0,0,0,0.4)) !important;
+  background: light-dark(rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.4)) !important;
   border: none !important;
   margin: 0px !important;
   border-radius: 8px;
