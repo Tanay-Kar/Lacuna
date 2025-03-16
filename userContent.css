@@ -104,10 +104,12 @@ Edit the natsumi-config.css file instead.
 @keyframes pdfjs-appear {
   from {
     opacity: 0;
+    filter: blur(5px);
   }
 
   to {
     opacity: 1;
+    filter: blur(0);
   }
 }
 
@@ -115,11 +117,13 @@ Edit the natsumi-config.css file instead.
   0% {
     opacity: 0;
     margin-top: -10px;
+    filter: blur(5px);
   }
 
   100% {
     opacity: 1;
     margin-top: 0;
+    filter: blur(0);
   }
 }
 
@@ -156,8 +160,19 @@ Edit the natsumi-config.css file instead.
       #viewerContainer {
         inset: 0 !important;
 
-        #viewer .page:first-of-type {
-          margin-top: 60px !important;
+        #viewer > .page:first-of-type,
+        #viewer .spread:first-of-type .page {
+          margin-top: 43px !important;
+          transition: margin-top 0.3s ease;
+        }
+      }
+
+      .toolbar {
+        width: 100%;
+        height: 10px;
+
+        @media (-moz-bool-pref: "natsumi.theme.compact-marginless") {
+          height: 15px;
         }
       }
 
@@ -179,13 +194,12 @@ Edit the natsumi-config.css file instead.
         padding-bottom: 5px !important;
         height: calc(var(--toolbar-height) + 10px) !important;
         border: 1px solid rgba(20, 20, 20, 0.2) !important;
-        box-shadow: 0 0 var(--natsumi-glass-shadow-size) color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), black) !important;
+        box-shadow: 0 0 var(--natsumi-glass-shadow-size) var(--natsumi-glass-shadow-color) !important;
         animation: pdfjs-appear 0.3s ease;
         overflow: hidden !important;
 
         @media (prefers-color-scheme: dark) {
           border-color: rgba(235, 235, 235, 0.3) !important;
-          box-shadow: 0 0 var(--natsumi-glass-shadow-size) color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), white) !important;
         }
 
         &:has(#loadingBar.hidden) {
@@ -205,8 +219,8 @@ Edit the natsumi-config.css file instead.
           backdrop-filter: blur(10px);
           border-radius: 10px !important;
           border: 1px solid rgba(20, 20, 20, 0.2) !important;
-          box-shadow: 0 0 var(--natsumi-glass-shadow-size) color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), black) !important;
-          animation: secondary-appear 0.2s ease;
+          box-shadow: 0 0 var(--natsumi-glass-shadow-size) var(--natsumi-glass-shadow-color) !important;
+          animation: secondary-appear 0.3s ease;
 
           &.hidden {
             animation: none !important;
@@ -214,7 +228,6 @@ Edit the natsumi-config.css file instead.
 
           @media (prefers-color-scheme: dark) {
             border-color: rgba(235, 235, 235, 0.3) !important;
-            box-shadow: 0 0 var(--natsumi-glass-shadow-size) color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), white) !important;
           }
 
           &::before, &::after {
@@ -247,13 +260,13 @@ Edit the natsumi-config.css file instead.
         top: auto !important;
         bottom: 5px !important;
         opacity: 0 !important;
-        transition: left 0.2s ease, opacity 0.2s ease !important;
+        transition: left 0.2s ease, opacity 0.2s ease, filter 0.2s ease !important;
         border: 1px solid rgba(20, 20, 20, 0.2) !important;
-        box-shadow: 0 0 var(--natsumi-glass-shadow-size) color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), black) !important;
+        box-shadow: 0 0 var(--natsumi-glass-shadow-size) var(--natsumi-glass-shadow-color) !important;
+        filter: blur(5px);
 
         @media (prefers-color-scheme: dark) {
           border-color: rgba(235, 235, 235, 0.3) !important;
-          box-shadow: 0 0 var(--natsumi-glass-shadow-size) color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), white) !important;
         }
 
         #toolbarSidebar {
@@ -313,6 +326,7 @@ Edit the natsumi-config.css file instead.
       #outerContainer.sidebarOpen #sidebarContainer {
         left: 5px !important;
         opacity: 1 !important;
+        filter: blur(0);
       }
 
       #scaleSelectContainer {
@@ -366,6 +380,12 @@ Edit the natsumi-config.css file instead.
         &.toggled {
           background-color: var(--toolbarbutton-active-background) !important;
         }
+
+        &::before {
+          mask-size: contain !important;
+          mask-repeat: no-repeat;
+          -moz-context-properties: fill;
+        }
       }
 
       /* Document properties */
@@ -375,11 +395,10 @@ Edit the natsumi-config.css file instead.
         backdrop-filter: blur(10px);
         border-radius: 10px !important;
         border: 1px solid rgba(20, 20, 20, 0.2) !important;
-        box-shadow: 0 0 var(--natsumi-glass-shadow-size) color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), black) !important;
+        box-shadow: 0 0 var(--natsumi-glass-shadow-size) var(--natsumi-glass-shadow-color) !important;
 
         @media (prefers-color-scheme: dark) {
           border-color: rgba(235, 235, 235, 0.3) !important;
-          box-shadow: 0 0 var(--natsumi-glass-shadow-size) color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), white) !important;
         }
 
         &:is([open]) {
@@ -392,6 +411,59 @@ Edit the natsumi-config.css file instead.
 
           @media (prefers-color-scheme: dark) {
             background-color: #363636 !important;
+          }
+        }
+      }
+
+      /* Compact mode */
+
+      @media (-moz-bool-pref: "natsumi.pdfjs.compact") {
+        .toolbar {
+          #toolbarContainer {
+            opacity: 0 !important;
+            pointer-events: none;
+            top: -5px !important;
+            transition: opacity 0.3s ease, top 0.3s ease, filter 0.3s ease;
+            filter: blur(5px);
+          }
+
+          &:hover, &:has(.toolbarButton:not(#sidebarToggleButton)[aria-expanded="true"]),
+          &:has(input:focus), &:has(select:focus) {
+            height: 52px;
+
+            #toolbarContainer {
+              top: 5px !important;
+              opacity: 1 !important;
+              pointer-events: auto;
+              filter: blur(0);
+            }
+          }
+        }
+
+        @media (-moz-bool-pref: "natsumi.pdfjs.compact-dynamic") {
+          .toolbar:has(#sidebarToggleButton[aria-expanded="true"]) {
+            height: 52px;
+
+            #toolbarContainer {
+              top: 5px !important;
+              opacity: 1 !important;
+              pointer-events: auto;
+              filter: blur(0);
+            }
+          }
+
+          &:has(#sidebarToggleButton:not([aria-expanded="true"])) {
+            #viewer > .page:first-of-type,
+            #viewer .spread:first-of-type .page {
+              margin-top: 0 !important;
+            }
+          }
+        }
+
+        @media not (-moz-bool-pref: "natsumi.pdfjs.compact-dynamic") {
+          #viewer > .page:first-of-type,
+          #viewer .spread:first-of-type .page {
+            margin-top: 0 !important;
           }
         }
       }
@@ -415,7 +487,7 @@ Edit the natsumi-config.css file instead.
       }
 
       #sidebarToggleButton::before {
-        mask-image: url('chrome://browser/skin/sidebars.svg') !important;
+        mask-image: url('chrome://browser/skin/zen-icons/sidebar.svg') !important;
       }
 
       #editorHighlightButton::before {
