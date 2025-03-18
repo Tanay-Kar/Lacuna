@@ -304,7 +304,7 @@ browser[transparent='true'] {
 
 /*Transition for tab background */
 .tabbrowser-tab .tab-background {
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s ease;
   box-shadow: none !important;
 }
 
@@ -327,8 +327,30 @@ browser[transparent='true'] {
 
 /*When tabs are selected/active */
 .tabbrowser-tab .tab-background:is([selected], [multiselected]) {
-  background-color: light-dark(color-mix(in srgb, #fefefe 45%, transparent),
-      color-mix(in srgb, #000000 35%, transparent)) !important;
+  background-color: light-dark(
+     color-mix(in srgb, #fefefe 45%, transparent),
+     color-mix(in srgb, #000000 35%, transparent)
+  ) !important;
+}
+
+tab-group:has([selected="true"]) {
+  background-color: transparent !important;
+ 
+  &:hover {
+    background-color: light-dark(
+      color-mix(in srgb, #fefefe 10%, transparent),
+      color-mix(in srgb, #000000 10%, transparent)
+    ) !important;
+  }
+  .tabbrowser-tab .tab-background:is([selected], [multiselected]) {
+    background-color: light-dark(
+      color-mix(in srgb, #fefefe 45%, transparent),
+      color-mix(in srgb, #000000 35%, transparent)
+    ) !important;
+  }
+  .tabbrowser-tab .tab-background:not(:is([selected], [multiselected])) {
+    background-color: transparent !important;
+  }
 }
 
 /*Styling for Tab close button*/
