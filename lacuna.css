@@ -57,6 +57,19 @@ browser[transparent='true'] {
   --zen-primary-color: #dedede !important; /* Change according to wallpaper */
 }
 
+/* Makes top 30px a draggable area for the window */
+@media not (-moz-bool-pref: "lacuna.utils.disable-top-drag") {
+  @media (-moz-bool-pref: "zen.view.use-single-toolbar") {
+    #tabbrowser-tabbox::after {
+      content: "" !important;
+      position: absolute !important;
+      height: 30px !important;
+      width: 100% !important;
+      -moz-window-dragging: drag !important;
+    }
+  }
+}
+
 /* === WEBPANEL BG GRADIENT & MAX WIDTH === */
 #zen-sidebar-web-panel {
   max-width: 100% !important;
