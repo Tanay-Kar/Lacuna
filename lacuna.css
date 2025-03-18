@@ -293,7 +293,7 @@ browser[transparent='true'] {
   mask-image: linear-gradient(to top, transparent, black 20px) !important;
 }
 
-@media (-moz-bool-pref: "lacuna.tab.pined-tabs-bg") {
+@media (-moz-bool-pref: "lacuna.tab.pinned-tabs-bg") {
   .tabbrowser-tab[pinned]:not([zen-essential="true"]) {
     .tab-background {
       background-color: light-dark(rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.25)) !important;
