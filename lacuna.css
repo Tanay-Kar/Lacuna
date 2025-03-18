@@ -50,6 +50,13 @@ browser[transparent='true'] {
   display: none !important;
 }
 
+/* Transparent workspace custom Primary Colour */
+/* Replace workspace id from about:config > `zen.workspaces.active` */
+
+:root[zen-workspace-id="991ff3e9-a298-46e6-b95f-b04753959811"] {
+  --zen-primary-color: #dedede !important; /* Change according to wallpaper */
+}
+
 /* === WEBPANEL BG GRADIENT & MAX WIDTH === */
 #zen-sidebar-web-panel {
   max-width: 100% !important;
