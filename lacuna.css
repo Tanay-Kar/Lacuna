@@ -657,6 +657,15 @@ findbar {
   }
 }
 
+/* Disables dancing notes animation */
+@media (-moz-bool-pref: "lacuna.ui.disable-dancing-notes") {
+  #zen-media-controls-toolbar {
+    & #zen-media-focus-button::after {
+      background: none !important;
+    }
+  }
+}
+
 /* === BETTER CUSTOMIZE TOOLBAR === */
 /* Based on code by https://github.com/Tanay-Kar */
 
