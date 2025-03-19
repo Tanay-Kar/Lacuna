@@ -90,6 +90,7 @@ These are a few configs which will allow you to control certain features of lacu
 - `lacuna.tab.pinned-tabs-bg` : Makes pinned tabs background look similar to essentials
 - `lacuna.urlbar.smaller-compact-mode` : Fixes url bar blur with *Smaller Compact Mode* mod
 - `lacuna.ui.force-font` : Forces a defined font across UI
+- `lacuna.ui.disable-dancing-notes` : Disables dancing notes animation on media control ui
 
 > [!Note]
 > You'd have to create these configs yourself in about:config. All configs are of type `boolean` unless mentioned otherwise
