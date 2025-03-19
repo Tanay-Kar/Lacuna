@@ -39,6 +39,11 @@ their author(s) have been provided above the used code.
   }
 }
 
+browser {
+  /* Needed for blur */
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
 /* State-less Tab background */
 browser[transparent='true'] {
   background: light-dark(#ffffff33, #ffffff09) !important;
