@@ -68,7 +68,7 @@ browser[transparent='true'] {
     #tabbrowser-tabbox::after {
       content: "" !important;
       position: absolute !important;
-      height: 30px !important;
+      height: 15px !important;
       width: 100% !important;
       -moz-window-dragging: drag !important;
     }
