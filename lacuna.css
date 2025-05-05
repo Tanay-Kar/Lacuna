@@ -284,6 +284,12 @@ browser[transparent='true'] {
   fill: light-dark(#dddddddd, #000000dd) !important;
 }
 
+/* === WORKSPACE INDICATOR === */
+.zen-workspace-tabs-section > .zen-current-workspace-indicator-name {
+  margin-left: 5px !important;
+  font-weight: 900 !important;
+}
+
 /* === NORMAL TAB CUSTOMIZATION === */
 
 /* Text on general tab bar */
