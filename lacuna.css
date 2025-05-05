@@ -119,7 +119,7 @@ browser[transparent='true'] {
 
 /* Makes padding symmetrical in single toolbar mode with top workspace indicator hidden */
 @media not (-moz-bool-pref: "zen.workspaces.show-workspace-indicator") {
-  #zen-essentials-container {
+  .zen-essentials-container {
     margin-bottom: var(--zen-toolbox-padding) !important;
   }
 }
@@ -237,7 +237,7 @@ browser[transparent='true'] {
 
 /* Colouring Essentials */
 
-#zen-essentials-container .tabbrowser-tab {
+.zen-essentials-container .tabbrowser-tab {
   .tab-background {
     background-color: light-dark(rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.25)) !important;
   }
@@ -437,7 +437,7 @@ tab-group:has([selected="true"]) {
     }
   }
 
-  #zen-essentials-container {
+  .zen-essentials-container {
     .tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]):hover img {
       opacity: 1 !important;
       transition: opacity 0.1s ease-out !important;
@@ -463,7 +463,7 @@ tab-group:has([selected="true"]) {
     }
   }
 
-  #zen-essentials-container {
+  .zen-essentials-container {
     .tab-icon-overlay:is([soundplaying], [muted], [activemedia-blocked]) {
       margin: 0px !important;
     }
