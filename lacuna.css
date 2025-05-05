@@ -276,6 +276,14 @@ browser[transparent='true'] {
   }
 }
 
+/* === GLANCE === */
+#zen-glance-sidebar-container .toolbarbutton-1 {
+  background: light-dark(#000000aa,#44444499) !important;
+  backdrop-filter: blur(5px) saturate(1.2) !important;
+  
+  fill: light-dark(#dddddddd, #000000dd) !important;
+}
+
 /* === NORMAL TAB CUSTOMIZATION === */
 
 /* Text on general tab bar */
