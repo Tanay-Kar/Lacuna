@@ -203,6 +203,15 @@ browser[transparent='true'] {
   }
 }
 
+.urlbarView-row[selected] {
+  background: var(--urlbarView-highlight-background) !important;
+}
+
+.urlbarView-row-inner[selected] .urlbarView-favicon {
+  fill: white !important;
+  background: none !important;
+}
+
 :root:not([zen-compact-mode="true"]) {
   #urlbar[open][zen-floating-urlbar="true"] {
     #urlbar-background {
@@ -211,9 +220,6 @@ browser[transparent='true'] {
   }
 }
 
-.urlbarView-row[type="search"] {
-  min-height: 50px !important;
-}
 
 /* === BUTTONS ABOVE URL BAR === */
 #zen-sidebar-top-buttons,
