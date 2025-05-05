@@ -119,7 +119,7 @@ browser[transparent='true'] {
 
 /* Makes padding symmetrical in single toolbar mode with top workspace indicator hidden */
 @media not (-moz-bool-pref: "zen.workspaces.show-workspace-indicator") {
-  #zen-essentials-container {
+  .zen-essentials-container {
     margin-bottom: var(--zen-toolbox-padding) !important;
   }
 }
@@ -203,6 +203,15 @@ browser[transparent='true'] {
   }
 }
 
+.urlbarView-row[selected] {
+  background: var(--urlbarView-highlight-background) !important;
+}
+
+.urlbarView-row-inner[selected] .urlbarView-favicon {
+  fill: white !important;
+  background: none !important;
+}
+
 :root:not([zen-compact-mode="true"]) {
   #urlbar[open][zen-floating-urlbar="true"] {
     #urlbar-background {
@@ -211,9 +220,6 @@ browser[transparent='true'] {
   }
 }
 
-.urlbarView-row[type="search"] {
-  min-height: 50px !important;
-}
 
 /* === BUTTONS ABOVE URL BAR === */
 #zen-sidebar-top-buttons,
@@ -237,7 +243,7 @@ browser[transparent='true'] {
 
 /* Colouring Essentials */
 
-#zen-essentials-container .tabbrowser-tab {
+.zen-essentials-container .tabbrowser-tab {
   .tab-background {
     background-color: light-dark(rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.25)) !important;
   }
@@ -268,6 +274,14 @@ browser[transparent='true'] {
           color-mix(in srgb, #000000 65%, transparent)) !important;
     }
   }
+}
+
+/* === GLANCE === */
+#zen-glance-sidebar-container .toolbarbutton-1 {
+  background: light-dark(#000000aa,#44444499) !important;
+  backdrop-filter: blur(5px) saturate(1.2) !important;
+  
+  fill: light-dark(#dddddddd, #000000dd) !important;
 }
 
 /* === NORMAL TAB CUSTOMIZATION === */
@@ -437,7 +451,7 @@ tab-group:has([selected="true"]) {
     }
   }
 
-  #zen-essentials-container {
+  .zen-essentials-container {
     .tabbrowser-tab:is([soundplaying], [muted], [activemedia-blocked]):hover img {
       opacity: 1 !important;
       transition: opacity 0.1s ease-out !important;
@@ -463,7 +477,7 @@ tab-group:has([selected="true"]) {
     }
   }
 
-  #zen-essentials-container {
+  .zen-essentials-container {
     .tab-icon-overlay:is([soundplaying], [muted], [activemedia-blocked]) {
       margin: 0px !important;
     }
