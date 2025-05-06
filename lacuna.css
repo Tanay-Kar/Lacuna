@@ -705,6 +705,17 @@ findbar {
   filter: blur(0.6px) !important;
 }
 
+@keyframes wiggle {
+  0% { transform: skewX(0) skewY(0); }
+  25% { transform: skewX(1.2deg) skewY(-1.2deg); }
+  75% { transform: skewX(-1.2deg) skewY(1.2deg); }
+  100% { transform: skewX(0) skewY(0); }
+}
+
+.tabbrowser-tab[multiselected] {
+  animation: wiggle 0.3s infinite;
+}
+
 .zen-essentials-container .tabbrowser-tab {
   &:hover .tab-background {
     transform: translate(0px,-1.2px) scale(1) !important;
@@ -718,6 +729,7 @@ findbar {
   transform: skewX(1deg) skewY(1deg) !important;
   filter: blur(0.6px) !important;
 }
+
 
 /* === BETTER CUSTOMIZE TOOLBAR === */
 /* Based on code by https://github.com/Tanay-Kar */
