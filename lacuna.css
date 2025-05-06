@@ -691,6 +691,34 @@ findbar {
   }
 }
 
+/* === ANIMATIONS === */
+.tabbrowser-tab {
+  transition: transform 0.2s ease-in-out !important;
+}
+
+.tabbrowser-tab:hover {
+  transform: translate(0.1px, -0.1px) scale(1.00001);
+}
+
+.tabbrowser-tab:active {
+  transform: translate(-0.1px, 0.1px) skewX(1deg) skewY(1deg) !important;
+  filter: blur(0.6px) !important;
+}
+
+.zen-essentials-container .tabbrowser-tab {
+  &:hover .tab-background {
+    transform: translate(0px,-1.2px) scale(1) !important;
+  }
+}
+
+.toolbarbutton-1:hover {
+  transform: scale(1.00001);
+}
+.toolbarbutton-1:active {
+  transform: skewX(1deg) skewY(1deg) !important;
+  filter: blur(0.6px) !important;
+}
+
 /* === BETTER CUSTOMIZE TOOLBAR === */
 /* Based on code by https://github.com/Tanay-Kar */
 
