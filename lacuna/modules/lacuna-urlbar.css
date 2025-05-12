@@ -1,0 +1,140 @@
+/* 
+Lacuna -  A Minimal Customization Pack for Zen Browser 
+
+Copyright (c) 2025 Tanay Kar
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE. 
+
+Lacuna uses code from others. The link to the original projects or
+their author(s) have been provided above the used code.
+
+*/
+
+/* For moving the URL bar */
+#nav-bar {
+    margin-top: -5px !important;
+    /* Reposition URL Bar*/
+    width: 100% !important;
+    align-self: center !important;
+}
+
+#urlbar-input {
+    text-align: center !important;
+}
+
+/* Center align */
+#urlbar>.urlbar-input-container {
+    align-self: center !important;
+}
+
+.urlbarView-body-inner {
+    #urlbar[open]>.urlbarView>.urlbarView-body-outer>& {
+        border-top: none !important;
+    }
+}
+
+#urlbar:not([open]) {
+    transition: opacity ease-in-out 5s;
+
+    #urlbar-background {
+        background-color: light-dark(color-mix(in srgb, #ffffff 25%, transparent), color-mix(in srgb, #000000 25%, transparent)) !important;
+    }
+
+    #urlbar-zoom-button {
+        display: none !important;
+    }
+
+    &:not(:hover) {
+
+        #userContext-icons,
+        #identity-permission-box,
+        #identity-icon-box {
+            margin-inline-start: calc(-8px - 2 * var(--urlbar-icon-padding)) !important;
+            transform: translateX(100%);
+            opacity: 0;
+            transition: all 0.1s ease;
+        }
+    }
+
+    &:hover {
+
+        #userContext-icons,
+        #identity-permission-box,
+        #identity-icon-box {
+            transform: none !important;
+        }
+    }
+}
+
+/* Focus Blur */
+#zen-tabbox-wrapper {
+    transition: filter 0.1s ease-in-out !important;
+}
+
+#browser:has(#urlbar[open]) #zen-tabbox-wrapper {
+    filter: blur(4px) brightness(80%) !important;
+}
+
+#urlbar[open][zen-floating-urlbar="true"] {
+    #urlbar-background {
+        margin: -5px !important;
+        border: none !important;
+        background-color: light-dark(color-mix(in srgb, #fdfdfd 75%, transparent), color-mix(in srgb, #0e0e0e 75%, transparent)) !important;
+    }
+
+    #urlbar-container:has(&) {
+        background: light-dark(color-mix(in srgb, #fdfdfd 20%, transparent), color-mix(in srgb, #0e0e0e 40%, transparent)) !important;
+    }
+}
+
+.urlbarView-row[selected] {
+    background: var(--urlbarView-highlight-background) !important;
+}
+
+.urlbarView-row-inner[selected] .urlbarView-favicon {
+    fill: white !important;
+    background: none !important;
+}
+
+:root:not([zen-compact-mode="true"]) {
+    #urlbar[open][zen-floating-urlbar="true"] {
+        #urlbar-background {
+            backdrop-filter: blur(20px) !important;
+        }
+    }
+}
+
+
+/* === BUTTONS ABOVE URL BAR === */
+#zen-sidebar-top-buttons,
+#zen-sidebar-top-buttons-customization-target {
+    & toolbarbutton:not(.titlebar-button) {
+        margin-top: -4px !important;
+        scale: 0.84;
+    }
+}
+
+#PanelUI-menu-button {
+    list-style-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><!-- Generator: Adobe Illustrator 28.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve"><style type="text/css">.st0{fill-rule:evenodd;clip-rule:evenodd;fill:%23FFFFFF;}</style><path class="st0" d="M16,22.2c3.4,0,6.2-2.8,6.2-6.2c0-3.4-2.8-6.2-6.2-6.2c-3.4,0-6.2,2.8-6.2,6.2C9.8,19.4,12.6,22.2,16,22.2z M20.9,16c0,2.7-2.2,4.9-4.9,4.9s-4.9-2.2-4.9-4.9s2.2-4.9,4.9-4.9S20.9,13.3,20.9,16z"/><path class="st0" d="M26.7,16c0,5.9-4.8,10.7-10.7,10.7S5.3,21.9,5.3,16S10.1,5.3,16,5.3S26.7,10.1,26.7,16z M16,24.6c4.8,0,8.6-3.9,8.6-8.6S20.8,7.4,16,7.4S7.4,11.2,7.4,16S11.2,24.6,16,24.6z"/><path class="st0" d="M32,16c0,8.8-7.2,16-16,16S0,24.8,0,16S7.2,0,16,0S32,7.2,32,16z M16,29.1c7.3,0,13.1-5.9,13.1-13.1S23.3,2.9,16,2.9S2.9,8.7,2.9,16S8.7,29.1,16,29.1z"/></svg>') !important;
+    margin: 0px !important;
+
+    @media (prefers-color-scheme: light) {
+        filter: invert(1);
+    }
+}

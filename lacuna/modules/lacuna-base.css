@@ -1,0 +1,65 @@
+/* 
+Lacuna -  A Minimal Customization Pack for Zen Browser 
+
+Copyright (c) 2025 Tanay Kar
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE. 
+
+Lacuna uses code from others. The link to the original projects or
+their author(s) have been provided above the used code.
+
+*/
+
+browser {
+    /* Needed for blur */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* State-less Tab background */
+browser[transparent='true'] {
+    background: light-dark(#ffffff33, #ffffff09) !important;
+}
+
+/* Based on code by Verix */
+/* Hide all results after the 6th one */
+#urlbar[open] #urlbar-results>*:nth-child(n+6) {
+    display: none !important;
+}
+
+/* Transparent workspace custom Primary Colour */
+/* Replace workspace id from about:config > `zen.workspaces.active` */
+
+:root[zen-workspace-id="991ff3e9-a298-46e6-b95f-b04753959811"] {
+    --zen-primary-color: #dedede !important;
+    /* Change according to wallpaper */
+}
+
+/* Makes top 30px a draggable area for the window */
+@media not (-moz-bool-pref: "lacuna.utils.disable-top-drag") {
+    @media (-moz-bool-pref: "zen.view.use-single-toolbar") {
+        #tabbrowser-tabbox::after {
+            content: "" !important;
+            position: absolute !important;
+            height: 15px !important;
+            width: 100% !important;
+            -moz-window-dragging: drag !important;
+        }
+    }
+}
+
