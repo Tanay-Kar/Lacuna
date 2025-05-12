@@ -1,0 +1,44 @@
+/* 
+Lacuna -  A Minimal Customization Pack for Zen Browser 
+
+Copyright (c) 2025 Tanay Kar
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE. 
+
+Lacuna uses code from others. The link to the original projects or
+their author(s) have been provided above the used code.
+
+*/
+
+@import "modules/lacuna-base.css";
+@import "modules/lacuna-ui-tweaks.css";
+@import "modules/lacuna-tabs.css";
+@import "modules/lacuna-essentials.css";
+@import "modules/lacuna-urlbar.css";
+@import "modules/lacuna-audio-indicator.css";
+@import "modules/lacuna-media-ctrl.css";
+@import "modules/lacuna-animations.css";
+@import "modules/lacuna-compact.css";
+@import "modules/lacuna-extra.css";
+@import "modules/lacuna-ff-sidebars.css";
+
+@import "extra/lacuna-second-sidebar.css";
+@import "extra/lacuna-load-bar.css";
+
+/* :) */

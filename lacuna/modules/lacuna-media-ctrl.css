@@ -1,0 +1,131 @@
+/* 
+Lacuna -  A Minimal Customization Pack for Zen Browser 
+
+Copyright (c) 2025 Tanay Kar
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE. 
+
+Lacuna uses code from others. The link to the original projects or
+their author(s) have been provided above the used code.
+
+*/
+
+/* === BETTER MEDIA CONTROL === */
+/* Based on code by https://github.com/Tanay-Kar */
+
+#zen-media-controls-toolbar>toolbaritem {
+    background-color: light-dark(color-mix(in srgb, #ffffff 35%, transparent),
+            color-mix(in srgb, #000000 35%, transparent)) !important;
+    backdrop-filter: saturate(1.8) contrast(1.6) blur(10px) !important;
+}
+
+
+
+#zen-media-controls-toolbar #zen-media-main-vbox {
+    padding: 5px !important;
+}
+
+#zen-media-controls-toolbar #zen-media-progress-bar {
+    transition: height opacity 0.2s ease;
+}
+
+#zen-media-controls-toolbar #zen-media-progress-bar::-moz-range-thumb {
+    opacity: 0 !important;
+    height: 6px !important;
+    width: 6px !important;
+}
+
+#zen-media-controls-toolbar #zen-media-progress-bar::-moz-range-progress {
+  box-shadow: var(--zen-colors-primary) 0px 0px 5px !important;
+}
+
+#zen-media-controls-toolbar #zen-media-progress-hbox {
+    --progress-height: 2px;
+}
+
+
+
+#zen-media-controls-toolbar #zen-media-progress-hbox:hover {
+    --progress-height: 3px;
+
+    & #zen-media-progress-bar::-moz-range-thumb {
+        opacity: 1 !important;
+    }
+}
+
+
+
+#zen-media-controls-toolbar #zen-media-info-vbox::before {
+    background: transparent !important;
+}
+
+#zen-media-controls-toolbar:hover #zen-media-info-vbox {
+    padding-bottom: 60px !important;
+}
+
+
+
+#zen-media-controls-toolbar #zen-media-title {
+    font-weight: 900 !important;
+    opacity: 1 !important;
+}
+
+#zen-media-controls-toolbar #zen-media-artist {
+    font-weight: 600 !important;
+    opacity: 0.7 !important;
+}
+
+
+#zen-media-current-time {
+    font-weight: 1000 !important;
+    opacity: 0.6 !important;
+}
+
+#zen-media-duration {
+    font-weight: 900 !important;
+    opacity: 0.4 !important;
+}
+
+#zen-media-controls-toolbar #zen-media-controls-hbox {
+    transition: opacity 0.1s ease;
+
+    #zen-media-nexttrack-button {
+        opacity: 0.6 !important;
+    }
+
+    #zen-media-previoustrack-button {
+        opacity: 0.6 !important;
+    }
+}
+
+#zen-media-controls-toolbar {
+    image.toolbarbutton-icon {
+        width: 24px !important;
+        height: 24px !important;
+    }
+}
+
+/* Disables dancing notes animation */
+@media (-moz-bool-pref: "lacuna.ui.disable-dancing-notes") {
+    #zen-media-controls-toolbar {
+        & #zen-media-focus-button::after {
+            background: none !important;
+        }
+    }
+}

@@ -1,0 +1,82 @@
+/* 
+Lacuna -  A Minimal Customization Pack for Zen Browser 
+
+Copyright (c) 2025 Tanay Kar
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE. 
+
+Lacuna uses code from others. The link to the original projects or
+their author(s) have been provided above the used code.
+
+*/
+
+/* Forces suggested font rules : not by default */
+@media (-moz-bool-pref: "lacuna.ui.force-font") {
+    * {
+        --strict-font-size: 11px;
+        --strict-font-family: "Roboto", sans-serif;
+        font-family: var(--strict-font-family) !important;
+        font-size: var(--strict-font-size) !important;
+        letter-spacing: 0.2px !important;
+    }
+}
+
+.tab-label {
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.tabbrowser-tab[selected="true"]>.tab-stack>.tab-content>.tab-label-container>.tab-label {
+    font-weight: 700;
+    opacity: 0.7;
+}
+
+#new-tab-button>.toolbarbutton-text {
+    font-weight: 700 !important;
+    opacity: 0.5;
+}
+
+#new-tab-button {
+    padding-left: 15px !important;
+}
+
+#urlbar-input {
+    font-weight: 600 !important;
+    opacity: 0.7;
+}
+
+#urlbar-zoom-button>.toolbarbutton-text {
+    font-weight: 600;
+    opacity: 0.4;
+}
+
+#identity-icon-label {
+    opacity: 0.4;
+    font-weight: 700;
+}
+
+.sidebar-panel {
+  font-weight: 600 !important;
+  opacity: 0.7 !important;
+}
+
+.zen-workspace-tabs-section>.zen-current-workspace-indicator-name {
+    margin-left: 5px !important;
+    font-weight: 900 !important;
+}
