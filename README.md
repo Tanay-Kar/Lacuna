@@ -37,15 +37,18 @@
 ## Installation
 #### 1. Installing css
 - If you have not already, follow the [Zen Live Editing](https://docs.zen-browser.app/guides/live-editing) guide to first create your **chrome** folder.
-- Copy `lacuna.css` to the chrome folder and add the following snippet to the top of your `userChrome.css`
+- Copy the `lacuna` folder to the chrome folder and add the following snippet to the top of your `userChrome.css`
 
   ```css
-  @import "lacuna.css";
+  @import "lacuna/lacuna.css";
   ```
+
+  **or** Paste the provided `userChrome.css` in the chrome folder
+  
 - Copy the `css/userContent.css` to the same folder.
 - Restart the browser
 
-#### 2. Required Mods
+#### 2. Recommended Mods
 <b>
   
 - [Better Find Bar](https://zen-browser.app/mods/a6335949-4465-4b71-926c-4a52d34bc9c0)
@@ -75,13 +78,11 @@
 |-------------------------------------------|-------|
 | `zen.theme.color-prefs.amoled`            | true  |
 | `zen.theme.essentials-favicon-bg`         | true  |
-| `zen.theme.pill-button`                   | true  |
 | `zen.themes.disable-all`                  | false |
 | `zen.urlbar.behavior`                     | float |
 | `zen.view.compact.hide-toolbar`           | true  |
 | `zen.view.grey-out-inactive-windows`      | false |
 | `zen.workspaces.natural-scroll`           | true  |
-| `zen.workspaces.show-workspace-indicator` | false |
 
 ## Lacuna configs
 These are a few configs which will allow you to control certain features of lacuna
