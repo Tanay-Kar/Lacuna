@@ -27,56 +27,60 @@ their author(s) have been provided above the used code.
 */
 
 /* Forces suggested font rules : not by default */
-@media (-moz-bool-pref: "lacuna.ui.force-font") {
+@media not (-moz-bool-pref: "lacuna.ui.default-font") {
     * {
         --strict-font-size: 11px;
-        --strict-font-family: "Roboto", sans-serif;
+        --strict-font-family: "SF Pro Display", "Roboto", sans-serif;
         font-family: var(--strict-font-family) !important;
         font-size: var(--strict-font-size) !important;
-        letter-spacing: 0.2px !important;
+    }
+
+    .tab-label {
+        font-weight: 600;
+        opacity: 0.8;
+    }
+
+    .tabbrowser-tab[selected="true"]
+        > .tab-stack
+        > .tab-content
+        > .tab-label-container
+        > .tab-label {
+        font-weight: 600;
+        opacity: 0.9;
+    }
+
+    #new-tab-button > .toolbarbutton-text {
+        font-weight: 700 !important;
+        opacity: 0.7;
+    }
+
+    #new-tab-button {
+        padding-left: 15px !important;
+    }
+
+    #urlbar-input {
+        font-weight: 600 !important;
+        opacity: 0.6;
+    }
+
+    #urlbar-zoom-button > .toolbarbutton-text {
+        font-weight: 600;
+        opacity: 0.4;
+    }
+
+    #identity-icon-label {
+        opacity: 0.4;
+        font-weight: 600;
+    }
+
+    .sidebar-panel {
+        font-weight: 600 !important;
+        opacity: 0.7 !important;
+    }
+
+    .zen-workspace-tabs-section > .zen-current-workspace-indicator-name {
+        margin-left: 5px !important;
+        font-weight: 700 !important;
     }
 }
 
-.tab-label {
-    font-weight: 700;
-    opacity: 0.8;
-}
-
-.tabbrowser-tab[selected="true"]>.tab-stack>.tab-content>.tab-label-container>.tab-label {
-    font-weight: 700;
-    opacity: 0.7;
-}
-
-#new-tab-button>.toolbarbutton-text {
-    font-weight: 700 !important;
-    opacity: 0.5;
-}
-
-#new-tab-button {
-    padding-left: 15px !important;
-}
-
-#urlbar-input {
-    font-weight: 600 !important;
-    opacity: 0.7;
-}
-
-#urlbar-zoom-button>.toolbarbutton-text {
-    font-weight: 600;
-    opacity: 0.4;
-}
-
-#identity-icon-label {
-    opacity: 0.4;
-    font-weight: 700;
-}
-
-.sidebar-panel {
-  font-weight: 600 !important;
-  opacity: 0.7 !important;
-}
-
-.zen-workspace-tabs-section>.zen-current-workspace-indicator-name {
-    margin-left: 5px !important;
-    font-weight: 900 !important;
-}
