@@ -147,7 +147,7 @@ tab-group:has([selected="true"]) {
     height: 6px !important;
     opacity: 0.5 !important;
     border-radius: 2.5px !important;
-    filter: saturate(1.4) !important;
+    filter: light-dark(saturate(0.8), saturate(1.4)) !important;
     background: var(--identity-tab-color) !important;
 }
 
@@ -157,21 +157,21 @@ tab-group:has([selected="true"]) {
                    0 0 2px var(--identity-tab-color),
                    0 0 3px var(--identity-tab-color),
                    0 0 4px var(--identity-tab-color);
-        filter: saturate(1.4) brightness(1.1) !important;
+        filter: light-dark(saturate(1) brightness(0.5), saturate(1.4) brightness(1.1)) !important;
     }
     50% {
         box-shadow: 0 0 2px var(--identity-tab-color),
                    0 0 6px var(--identity-tab-color),
                    0 0 12px var(--identity-tab-color),
                    0 0 24px var(--identity-tab-color);
-        filter: saturate(1.5) brightness(1.3) !important;
+        filter: light-dark(saturate(1) brightness(0.7), saturate(1.5) brightness(1.3)) !important;
     }
     100% {
         box-shadow: 0 0 1px var(--identity-tab-color),
                    0 0 2px var(--identity-tab-color),
                    0 0 3px var(--identity-tab-color),
                    0 0 4px var(--identity-tab-color);
-        filter: saturate(1.4) brightness(1.1) !important;
+        filter: light-dark(saturate(1) brightness(0.5), saturate(1.4) brightness(1.1)) !important;
     }
 }
 
