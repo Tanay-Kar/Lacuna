@@ -1,3 +1,18 @@
 * {
   --natsumi-primary-color: #00000066;
 }
+
+@media not -moz-pref("natsumi.pdfjs.disabled") {
+  html[mozdisallowselectionprint] {
+    &:has(head link:nth-of-type(1)[href^="resource://pdf.js"]) {
+      body {
+        @media -moz-pref("lacuna.pdfjs.transparent") {
+          background-color: #ffffff44 !important;
+          @media (prefers-color-scheme: dark) {
+            background-color: #00000022 !important;
+          }
+        }
+      }
+    }
+  }
+}
