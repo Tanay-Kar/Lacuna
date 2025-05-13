@@ -26,20 +26,9 @@ their author(s) have been provided above the used code.
 
 */
 
-/* Text on general tab bar */
-
-.tab-text:not([pinned]) {
-    margin-top: 1px !important;
-    margin-left: 6px !important;
-}
-
-
-:root[zen-sidebar-expanded] tabbrowser-tab:not([zen-glance-tab="true"])>.tab-stack>.tab-background {
-    height: 40px !important;
-}
 
 /* reduce favicon sizes */
-:root[zen-sidebar-expanded] .tabbrowser-tab:not([zen-glance-tab="true"])>.tab-stack>.tab-content>.tab-icon-stack>.tab-icon-image:not([pinned]) {
+:root[zen-sidebar-expanded] .tabbrowser-tab:not([zen-glance-tab="true"]) .tab-icon-image:not([pinned]) {
     width: 14px !important;
     height: 14px !important;
     margin-left: 3.5px !important;
@@ -91,22 +80,16 @@ their author(s) have been provided above the used code.
             color-mix(in srgb, #000000 35%, transparent)) !important;
 }
 
-tab-group:has([selected="true"]) {
-    background-color: transparent !important;
+tab-group[split-view-group] {
+    
+  &:hover {
+    background-color: var(--tab-hover-background-color);
+  }
+}
 
-    &:hover {
-        background-color: light-dark(color-mix(in srgb, #fefefe 10%, transparent),
-                color-mix(in srgb, #000000 10%, transparent)) !important;
-    }
-
-    .tabbrowser-tab .tab-background:is([selected], [multiselected]) {
-        background-color: light-dark(color-mix(in srgb, #fefefe 45%, transparent),
-                color-mix(in srgb, #000000 35%, transparent)) !important;
-    }
-
-    .tabbrowser-tab .tab-background:not(:is([selected], [multiselected])) {
-        background-color: transparent !important;
-    }
+:root:not([zen-sidebar-expanded]) tab-group[split-view-group] {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
 }
 
 /*Styling for Tab close button*/
