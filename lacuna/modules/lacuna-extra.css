@@ -38,16 +38,26 @@ their author(s) have been provided above the used code.
     margin-top: 0px !important;   
 }
 
-
-#zen-main-app-wrapper {
-      padding: 0px !important;
-     margin-top: 0px !important;
-  margin-left: 0px !important;
-  margin-right: 0px !important;
- margin-bottom: 0px !important;
-       border: 2px solid rgba(215, 215, 217, 0.1);
- 
-      border-radius: 10px !important;
+/* === WORKSPACE INDICATOR === */
+.zen-current-workspace-indicator {
+    &:hover,
+    &[open='true'] {
+        &::before {
+            background: transparent !important;
+        }
     }
+}
+
+/* === SECOND WINDOW BORDER === */
+#zen-main-app-wrapper {
+    padding: 0px !important;
+    margin-top: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    margin-bottom: 0px !important;
+    border: 2px solid rgba(215, 215, 217, 0.1);
+}
     
+
+
 
