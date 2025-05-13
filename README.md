@@ -92,6 +92,7 @@ These are a few configs which will allow you to control certain features of lacu
 - `lacuna.urlbar.smaller-compact-mode` : Fixes url bar blur with *Smaller Compact Mode* mod
 - `lacuna.ui.default-font` : Applies default zen font settings
 - `lacuna.ui.disable-dancing-notes` : Disables dancing notes animation on media control ui
+- `lacuna.pdfjs.transparent` : Adds a transparent background to the pdf viewer
 
 > [!Note]
 > You'd have to create these configs yourself in about:config. All configs are of type `boolean` unless mentioned otherwise
