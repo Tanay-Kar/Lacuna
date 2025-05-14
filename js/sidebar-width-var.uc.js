@@ -5,11 +5,6 @@
   const mainWindow = document.getElementById('main-window');
   const toolbox = document.getElementById('navigator-toolbox');
 
-  if (!mainWindow || !toolbox) {
-    console.warn('[userChrome] main-window or navigator-toolbox not found.');
-    return;
-  }
-
   function updateSidebarWidthIfCompact() {
     const isCompact = mainWindow.getAttribute('zen-compact-mode') === 'true';
     if (!isCompact) return;
