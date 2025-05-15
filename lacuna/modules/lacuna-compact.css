@@ -33,6 +33,9 @@ their author(s) have been provided above the used code.
 body:has([zen-compact-mode="true"]) {  
     #titlebar {
         margin: 10px !important;
+        &::before {
+            background: transparent !important;
+        }
     }
     
     #navigator-toolbox #titlebar {        
