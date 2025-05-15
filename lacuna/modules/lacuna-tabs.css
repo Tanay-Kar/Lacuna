@@ -164,3 +164,9 @@ tab-group[split-view-group] {
     width: 5px !important;
     animation: pulsate 2s infinite ease-in-out !important;
 }
+
+@media (-moz-bool-pref: "lacuna.tab.no-container-indicator") {
+    .tabbrowser-tab[usercontextid] .tab-background::after {
+        display: none !important;
+    }
+}
