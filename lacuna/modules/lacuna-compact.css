@@ -55,8 +55,15 @@ body:has([zen-compact-mode="true"]) {
 /* Requires `sidebar-width-blur.js` - Check readme for instructions */
 
 body:has([zen-compact-mode="true"] #navigator-toolbox[zen-has-hover="true"]) #zen-tabbox-wrapper {
+    
     --zen-sidebar-width-fallback: 160px; /* Change this for manual sidebar width (no js) */
+    
     background: linear-gradient(to right, light-dark(#eee,#111) 0px, light-dark(#eee,#111) calc(var(--zen-sidebar-width, --zen-sidebar-width-fallback) + 25px), transparent calc(var(--zen-sidebar-width, --zen-sidebar-width-fallback) + 100px));
+
+    @media (-moz-bool-pref: "lacuna.ui.sidebar-blur-bg.custom-color") {
+        --zen-sidebar-transparent-background-color: blue; /* Change this to add a custom accent colour in case of saturated wallpapers */
+        background: linear-gradient(to right, var(--zen-sidebar-transparent-background-color) 0px, var(--zen-sidebar-transparent-background-color) calc(var(--zen-sidebar-width, --zen-sidebar-width-fallback) + 25px), transparent calc(var(--zen-sidebar-width, --zen-sidebar-width-fallback) + 100px));
+    }    
 }
 
 
