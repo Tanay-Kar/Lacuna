@@ -33,7 +33,7 @@ their author(s) have been provided above the used code.
 body:has([zen-compact-mode="true"]) {  
     #titlebar {
         margin: 15px !important;
-        background: light-dark(#ffffff99, #00000055) !important;
+        background: color-mix(in srgb,  color-mix(in srgb, var(--zen-primary-color) 20%, light-dark(#eeeeee, #000000)) 80%, transparent) !important;
         backdrop-filter: blur(20px) saturate(1.4) contrast(1.1) !important;
         border-radius: 10px !important;
         &::before {
