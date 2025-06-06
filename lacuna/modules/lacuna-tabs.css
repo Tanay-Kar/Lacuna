@@ -57,9 +57,22 @@ their author(s) have been provided above the used code.
     box-shadow: none !important;
 }
 
-/* Bottom fade for tabs overflow */
-#zen-tabs-wrapper {
-    mask-image: linear-gradient(to top, transparent, black 20px) !important;
+/* Fade for tabs overflow */
+.workspace-arrowscrollbox[overflowing] {
+    /* When overflowing but not at start or end - fade both top and bottom */
+    &:not([scrolledtostart]):not([scrolledtoend]) {
+        mask-image: linear-gradient(to bottom, transparent, black 20px, black calc(100% - 20px), transparent) !important;
+    }
+    
+    /* When scrolled to start (at top) - fade only bottom */
+    &[scrolledtostart] {
+        mask-image: linear-gradient(to top, transparent, black 20px) !important;
+    }
+    
+    /* When scrolled to end (at bottom) - fade only top */
+    &[scrolledtoend] {
+        mask-image: linear-gradient(to bottom, transparent, black 20px) !important;
+    }
 }
 
 @media (-moz-bool-pref: "lacuna.tab.pinned-tabs-bg") {
